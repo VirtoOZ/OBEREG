@@ -161,6 +161,7 @@ body {
 	justify-content: center;
 	@include adaptiveValue("font-size", 100, 32);
 	line-height: math.div(120, 100);
+	font-weight: normal;
 	text-align: center;
 }
 
