@@ -8,12 +8,12 @@
 // <ШРИФТ>=================================
 //&display=swap - добавить при подключении через плагин
 // @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap);
-// @import "fonts/fonts"; // Подключить если есть локальные файлы шрифтов
+@import "fonts/fonts"; // Подключить если есть локальные файлы шрифтов
 // @import "fonts/icons"; // Подключить если есть файл иконочного шрифта
 // </ШРИФТ></IMPORT>=================================
 
 // <VARIABLES>=================================
-$fontFamily: "PlusJakartaSans";
+$fontFamily: "TTFirsNeue";
 $fontSize: rem(16); // где 14(px) - размер шрифта по умолчанию из макета
 // Основные цвета
 $blueColor: #4475f2;
@@ -155,6 +155,14 @@ body {
 // </IMPORT>=================================
 
 // <ОБЩИЙ СТИЛЬ>=================================
+.page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include adaptiveValue("font-size", 100, 32);
+	line-height: math.div(120, 100);
+	text-align: center;
+}
 
 //</ОБЩИЕ СТИЛИ>=================================
 
