@@ -180,6 +180,8 @@ body {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		@include adaptiveValue("padding-left", 50, 20);
+		@include adaptiveValue("padding-right", 50, 20);
 	}
 	// .main__title
 	&__title {
