@@ -27,7 +27,7 @@ $mainBgColor: #fafafa; //приглушить цвет для комфорта �
 // Настройки адаптивной сетки
 $minWidth: 320; // Минимальная ширина страницы
 $maxWidth: 2560; // Ширина полотна (макета)
-$maxWidthContainer: 1880; // Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 0; // Ширина ограничивающего контейнера (0 = нет ограничения)
 // Общий отступ у контейнера
 $containerPadding: 40; // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPaddingMin: 20; // минимальный отступ
@@ -56,7 +56,7 @@ body {
 	background: $mainBgColor;
 	color: $mainColor;
 	// @include adaptiveValue("font-size", 25, 18);
-	font-weight: 400;
+	font-weight: 300;
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
@@ -78,7 +78,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	// position: relative;
+	position: relative;
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;
@@ -106,12 +106,12 @@ body {
 			margin: 0 auto;
 		}
 		@if ($containerPadding>0) {
-			@if ($maxWidthContainer>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
-			} @else {
-				// @include adaptiveValue("padding-left", math.div($containerPadding, 2), $containerPaddingMin);
-				// @include adaptiveValue("padding-right", math.div($containerPadding, 2), $containerPaddingMin);
-			}
+			// @if ($maxWidthContainer>0) {
+			padding: 0 rem(math.div($containerPadding, 2));
+			// } @else {
+			// @include adaptiveValue("padding-left", math.div($containerPadding, 2), $containerPaddingMin);
+			// @include adaptiveValue("padding-right", math.div($containerPadding, 2), $containerPaddingMin);
+			// }
 		}
 	}
 } @else {
@@ -156,6 +156,8 @@ body {
 
 // <ОБЩИЙ СТИЛЬ>=================================
 .page {
+	min-height: 100%;
+	// position: relative;
 	// .page__main
 	&__main {
 	}
@@ -164,18 +166,20 @@ body {
 
 //<MAIN>=================================
 .main {
-	// .main__container
 	&__container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 	// .main__body
 	&__body {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
-		position: relative;
-		z-index: 2;
+		justify-content: center;
 	}
 	// .main__title
 	&__title {
@@ -210,8 +214,30 @@ body {
 			z-index: 1;
 		}
 	}
+	// .main__buttons
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
-
+.buttons-main {
+	// .buttons-main__left
+	&__left {
+		display: flex;
+		@include adaptiveValue("column-gap", 50, 20);
+		@include adaptiveValue("row-gap", 30, 10);
+	}
+	// .buttons-main__button
+	&__button {
+	}
+	// .buttons-main__right
+	&__right {
+		display: flex;
+		@include adaptiveValue("column-gap", 50, 20);
+		@include adaptiveValue("row-gap", 30, 10);
+	}
+}
 // ===<animation>===
 
 //</MAIN>=================================

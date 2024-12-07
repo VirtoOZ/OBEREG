@@ -5,10 +5,14 @@
 	@include adaptiveValue("padding-left", 20, 10);
 	@include adaptiveValue("padding-right", 20, 10);
 	border-radius: rem(25);
-	border: 1px solid #fff;
-	backdrop-filter: blur(rem(5));
+	color: #fff;
+}
+.button-red {
+	background-color: #792423;
 }
 .button-blur {
+	backdrop-filter: blur(rem(5));
+	border: 1px solid #fff;
 }
 .icon-menu {
 }
