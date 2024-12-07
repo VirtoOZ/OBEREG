@@ -4,7 +4,7 @@
 	&__body {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("column-gap", 40, 10);
+		@include adaptiveValue("column-gap", 40, 0);
 	}
 	// .menu__icon
 	&__icon {
@@ -13,7 +13,7 @@
 	&__list {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("column-gap", 50, 10, 2, 1920, 992);
+		@include adaptiveValue("column-gap", 50, 0, 2, 1920, 768);
 		flex-wrap: wrap;
 	}
 	// .menu__item
@@ -23,6 +23,7 @@
 	&__link {
 		@include adaptiveValue("font-size", 20, 13);
 		color: #fff;
+		text-shadow: 0 0 rem(1) #000;
 	}
 }
 .top-menu {
@@ -36,7 +37,7 @@
 //Burger Icon
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
 		width: rem(30);

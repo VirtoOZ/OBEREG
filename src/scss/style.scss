@@ -188,6 +188,7 @@ body {
 		line-height: math.div(120, 100);
 		font-weight: 400;
 		color: #fff;
+		text-shadow: 0 0 rem(1) #000;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 25, 16);
 		}
@@ -198,6 +199,7 @@ body {
 		@include adaptiveValue("font-size", 20, 16);
 		line-height: math.div(30, 20);
 		color: #fff;
+		text-shadow: 0 0 rem(1) #000;
 		@media (min-width: $mobileBig) {
 			width: 50%;
 		}
