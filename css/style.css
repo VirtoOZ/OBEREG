@@ -339,6 +339,12 @@ body {
   .bottom-footer__developer {
     font-size: 1.25rem
   }
+  .main__body {
+    padding-left: 3.125rem
+  }
+  .main__body {
+    padding-right: 3.125rem
+  }
   .main__title {
     font-size: 6.25rem
   }
@@ -412,6 +418,12 @@ body {
   }
   .bottom-footer__developer {
     font-size: .8125rem
+  }
+  .main__body {
+    padding-left: 1.25rem
+  }
+  .main__body {
+    padding-right: 1.25rem
   }
   .main__title {
     font-size: 2rem
@@ -693,6 +705,26 @@ body {
   @supports not (font-size:clamp(0.8125rem ,0.75rem + 0.3125vw ,1.25rem)) {
     .bottom-footer__developer {
       font-size: calc(.8125rem + .4375*(100vw - 20rem)/ 140)
+    }
+  }
+  @supports (padding-left:clamp(1.25rem ,0.9821428571rem + 1.3392857143vw ,3.125rem)) {
+    .main__body {
+      padding-left: clamp(1.25rem ,.9821428571rem + 1.3392857143vw ,3.125rem)
+    }
+  }
+  @supports not (padding-left:clamp(1.25rem ,0.9821428571rem + 1.3392857143vw ,3.125rem)) {
+    .main__body {
+      padding-left: calc(1.25rem + 1.875*(100vw - 20rem)/ 140)
+    }
+  }
+  @supports (padding-right:clamp(1.25rem ,0.9821428571rem + 1.3392857143vw ,3.125rem)) {
+    .main__body {
+      padding-right: clamp(1.25rem ,.9821428571rem + 1.3392857143vw ,3.125rem)
+    }
+  }
+  @supports not (padding-right:clamp(1.25rem ,0.9821428571rem + 1.3392857143vw ,3.125rem)) {
+    .main__body {
+      padding-right: calc(1.25rem + 1.875*(100vw - 20rem)/ 140)
     }
   }
   @supports (font-size:clamp(2rem ,1.3928571429rem + 3.0357142857vw ,6.25rem)) {
