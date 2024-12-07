@@ -349,6 +349,9 @@ body {
   .button {
     padding-right: 1.875rem
   }
+  .button {
+    font-size: 1.25rem
+  }
   .header__text {
     font-size: 3.125rem
   }
@@ -447,6 +450,9 @@ body {
   .button {
     padding-right: .625rem
   }
+  .button {
+    font-size: .625rem
+  }
   .header__text {
     font-size: 1.25rem
   }
@@ -529,7 +535,38 @@ body {
     display: none
   }
   .menu__link.button {
-    display: block
+    display: block;
+    font-weight: 400;
+    -webkit-animation: pulse 3s infinite linear;
+    animation: pulse 3s infinite linear
+  }
+  @-webkit-keyframes pulse {
+    0% {
+      color: #dcdedf;
+      box-shadow: 0 0 .4375rem rgba(255,255,255,0)
+    }
+    50% {
+      color: #fff;
+      box-shadow: 0 0 .4375rem #fff
+    }
+    100% {
+      color: #dcdedf;
+      box-shadow: 0 0 .4375rem rgba(255,255,255,0)
+    }
+  }
+  @keyframes pulse {
+    0% {
+      color: #dcdedf;
+      box-shadow: 0 0 .4375rem rgba(255,255,255,0)
+    }
+    50% {
+      color: #fff;
+      box-shadow: 0 0 .4375rem #fff
+    }
+    100% {
+      color: #dcdedf;
+      box-shadow: 0 0 .4375rem rgba(255,255,255,0)
+    }
   }
   .icon-menu {
     display: block;
@@ -577,6 +614,14 @@ body {
   .menu-open .icon-menu::after,
   .menu-open .icon-menu::before {
     box-shadow: none
+  }
+}
+@media (max-width:61.99875em)and (max-width:20em) {
+  .menu__link.button {
+    padding-top: .9375rem
+  }
+  .menu__link.button {
+    padding-bottom: .9375rem
   }
 }
 @media (max-width:61.99875em)and (any-hover:none) {
@@ -674,6 +719,16 @@ body {
   @supports not (padding-right:clamp(0.625rem ,0.4464285714rem + 0.8928571429vw ,1.875rem)) {
     .button {
       padding-right: calc(.625rem + 1.25*(100vw - 20rem)/ 140)
+    }
+  }
+  @supports (font-size:clamp(0.625rem ,0.5357142857rem + 0.4464285714vw ,1.25rem)) {
+    .button {
+      font-size: clamp(.625rem ,.5357142857rem + .4464285714vw ,1.25rem)
+    }
+  }
+  @supports not (font-size:clamp(0.625rem ,0.5357142857rem + 0.4464285714vw ,1.25rem)) {
+    .button {
+      font-size: calc(.625rem + .625*(100vw - 20rem)/ 140)
     }
   }
   @supports (font-size:clamp(1.25rem ,0.9821428571rem + 1.3392857143vw ,3.125rem)) {
@@ -933,6 +988,36 @@ body {
     }
   }
 }
+@media (max-width:61.99875em)and (min-width:160em) {
+  .menu__link.button {
+    padding-top: 1.5625rem
+  }
+  .menu__link.button {
+    padding-bottom: 1.5625rem
+  }
+}
+@media (max-width:61.99875em)and (min-width:20em)and (max-width:160em) {
+  @supports (padding-top:clamp(0.9375rem ,0.8482142857rem + 0.4464285714vw ,1.5625rem)) {
+    .menu__link.button {
+      padding-top: clamp(.9375rem ,.8482142857rem + .4464285714vw ,1.5625rem)
+    }
+  }
+  @supports not (padding-top:clamp(0.9375rem ,0.8482142857rem + 0.4464285714vw ,1.5625rem)) {
+    .menu__link.button {
+      padding-top: calc(.9375rem + .625*(100vw - 20rem)/ 140)
+    }
+  }
+  @supports (padding-bottom:clamp(0.9375rem ,0.8482142857rem + 0.4464285714vw ,1.5625rem)) {
+    .menu__link.button {
+      padding-bottom: clamp(.9375rem ,.8482142857rem + .4464285714vw ,1.5625rem)
+    }
+  }
+  @supports not (padding-bottom:clamp(0.9375rem ,0.8482142857rem + 0.4464285714vw ,1.5625rem)) {
+    .menu__link.button {
+      padding-bottom: calc(.9375rem + .625*(100vw - 20rem)/ 140)
+    }
+  }
+}
 @media (min-width:20em)and (max-width:30em) {
   @supports (margin-bottom:clamp(0.0000000625rem ,-3.7499998125rem + 18.749999375vw ,1.875rem)) {
     .footer__body {
@@ -961,6 +1046,6 @@ body {
     border: .0625rem solid #fff;
     color: #fff;
     font-weight: 400;
-    box-shadow: 0 0 .3125rem rgba(255,255,255,.7)
+    box-shadow: 0 0 .625rem #fff
   }
 }

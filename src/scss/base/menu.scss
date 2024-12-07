@@ -32,6 +32,24 @@
 		@media (max-width: $tablet) {
 			&.button {
 				display: block;
+				@include adaptiveValue("padding-top", 25, 15);
+				@include adaptiveValue("padding-bottom", 25, 15);
+				font-weight: 400;
+				animation: pulse 3s infinite linear;
+				@keyframes pulse {
+					0% {
+						color: $mainTextColor;
+						box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
+					}
+					50% {
+						color: #fff;
+						box-shadow: 0 0 rem(7) rgba(255, 255, 255, 1);
+					}
+					100% {
+						color: $mainTextColor;
+						box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
+					}
+				}
 			}
 		}
 	}
