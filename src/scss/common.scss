@@ -1,4 +1,17 @@
 // Заголовки, общие БЄМ блоки и проче...
+.button {
+	@include adaptiveValue("padding-top", 10, 5);
+	@include adaptiveValue("padding-bottom", 10, 2);
+	@include adaptiveValue("padding-left", 20, 10);
+	@include adaptiveValue("padding-right", 20, 10);
+	border-radius: rem(25);
+	border: 1px solid #fff;
+	backdrop-filter: blur(rem(5));
+}
+.button-blur {
+}
+.icon-menu {
+}
 
 //<GLOBAL Animations>=================================
 

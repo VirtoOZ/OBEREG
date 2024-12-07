@@ -1,19 +1,53 @@
 //<HEADER>=================================
 .header {
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	position: relative;
+	z-index: 2;
 	@include adaptiveValue("min-height", 100, 50);
 	// .header__text
 	&__text {
 		@include adaptiveValue("font-size", 50, 20);
 	}
+	// .header__wrapper
+	&__wrapper {
+	}
+	// .header__container
+	&__container {
+	}
+	// .header__body
+	&__body {
+		@include adaptiveValue("padding-top", 20, 5);
+		@include adaptiveValue("padding-bottom", 20, 5);
+	}
+	// .header__logo
+	&__logo {
+		flex: 0 0 rem(127);
+		display: inline-block;
+		text-align: center;
+		color: #fff;
+		img {
+			&:not(:last-child) {
+				margin-bottom: rem(10);
+			}
+		}
+		p {
+			@include adaptiveValue("font-size", 22, 16);
+			text-transform: uppercase;
+		}
+	}
+	// .header__menu
+	&__menu {
+	}
+	// .header__top
+	&__top {
+		flex: 1 1 auto;
+	}
+	// .header__bottom
+	&__bottom {
+		flex: 1 1 auto;
+		justify-self: end;
+	}
 }
-
-//<MENU>=======================================
-
-//</MENU>=======================================
 
 //<BURGER>=======================================
 .icon-menu {
