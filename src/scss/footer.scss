@@ -2,19 +2,25 @@
 .footer {
 	position: relative;
 	z-index: 2;
+	@media (max-width: $mobileSmall) {
+		.footer__bg {
+			transform: translate(0px, 100%);
+		}
+	}
 	// .footer__container
 	&__container {
 	}
 	// .footer__body
 	&__body {
-		@include adaptiveValue("padding-top", 30, 10);
-		@include adaptiveValue("padding-bottom", 30, 10);
+		@include adaptiveValue("margin-bottom", 30, 0, 2, 480, 320);
 	}
 	// .footer__top
 	&__top {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@include adaptiveValue("column-gap", 30, 10);
+		@include adaptiveValue("row-gap", 30, 10);
 	}
 	// .footer__bottom
 	&__bottom {
@@ -27,6 +33,7 @@
 	&__bg {
 		position: relative;
 		background-color: #383e42;
+		transition: transform 0.3s ease 0s;
 		&::before {
 			content: "";
 			position: absolute;
@@ -41,9 +48,33 @@
 .top-footer {
 	// .top-footer__left
 	&__left {
+		display: flex;
+		@include adaptiveValue("column-gap", 30, 10);
+		@include adaptiveValue("row-gap", 30, 10);
+		@media (max-width: $mobileSmall) {
+			& .button-blur {
+				display: none;
+			}
+			& .button-red {
+				width: 100%;
+			}
+			& {
+				flex: 1 1 auto;
+			}
+			& .button {
+				padding-top: rem(15);
+				padding-bottom: rem(15);
+			}
+		}
 	}
 	// .top-footer__right
 	&__right {
+		display: flex;
+		@include adaptiveValue("column-gap", 30, 10);
+		@include adaptiveValue("row-gap", 30, 10);
+		@media (max-width: $mobileBig) {
+			display: none;
+		}
 	}
 	// .top-footer__button
 	&__button {

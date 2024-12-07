@@ -18,6 +18,7 @@ $fontSize: rem(16); // где 14(px) - размер шрифта по умолч
 // Основные цвета
 $blueColor: #4475f2;
 $mainColor: #5e6282;
+$mainTextColor: #dcdedf;
 $lightGrayColor: #9a9ea6;
 $lightBlueColor: #23a6f0;
 $darkBlueColor: #181e4b;
@@ -29,8 +30,8 @@ $minWidth: 320; // Минимальная ширина страницы
 $maxWidth: 2560; // Ширина полотна (макета)
 $maxWidthContainer: 0; // Ширина ограничивающего контейнера (0 = нет ограничения)
 // Общий отступ у контейнера
-$containerPadding: 40; // (30 = по 15px слева и справа, 0 = нет отступа)
-$containerPaddingMin: 20; // минимальный отступ
+$containerPadding: 20; // (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPaddingMin: 10; // минимальный отступ
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding;
 
@@ -180,8 +181,8 @@ body {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		@include adaptiveValue("padding-left", 50, 20);
-		@include adaptiveValue("padding-right", 50, 20);
+		@include adaptiveValue("padding-left", 50, 10);
+		@include adaptiveValue("padding-right", 50, 10);
 	}
 	// .main__title
 	&__title {
@@ -197,13 +198,16 @@ body {
 	}
 	// .main__text
 	&__text {
-		align-self: end;
 		@include adaptiveValue("font-size", 20, 16);
 		line-height: math.div(30, 20);
 		color: #fff;
 		text-shadow: 0 0 rem(1) #000;
+		@media (max-width: $mobileBig) {
+			text-align: center;
+		}
 		@media (min-width: $mobileBig) {
 			width: 50%;
+			align-self: end;
 		}
 	}
 	// .main__video

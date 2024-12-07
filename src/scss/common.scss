@@ -1,18 +1,42 @@
 // Заголовки, общие БЄМ блоки и проче...
 .button {
 	@include adaptiveValue("padding-top", 10, 5);
-	@include adaptiveValue("padding-bottom", 10, 2);
-	@include adaptiveValue("padding-left", 20, 10);
-	@include adaptiveValue("padding-right", 20, 10);
+	@include adaptiveValue("padding-bottom", 10, 5);
+	@include adaptiveValue("padding-left", 30, 10);
+	@include adaptiveValue("padding-right", 30, 10);
 	border-radius: rem(25);
-	color: #fff;
+	color: $mainTextColor;
+	border: rem(1) solid transparent;
+	line-height: math.div(20, 20);
+	font-weight: 300;
+	transition:
+		color 0.3s ease 0s,
+		border 0.3s ease 0s,
+		box-shadow 0.3s ease 0s;
 }
 .button-red {
 	background-color: #792423;
+	border: rem(1) solid #792423;
+	@media (any-hover: hover) {
+		&:hover {
+			border: rem(1) solid #fff;
+			font-weight: 400;
+			color: #fff;
+			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0.7);
+		}
+	}
 }
 .button-blur {
 	backdrop-filter: blur(rem(5));
-	border: 1px solid #fff;
+	border: rem(1) solid $mainTextColor;
+	@media (any-hover: hover) {
+		&:hover {
+			border: rem(1) solid #fff;
+			color: #fff;
+			font-weight: 400;
+			box-shadow: 0 0 rem(5) rgba(255, 255, 255, 0.7);
+		}
+	}
 }
 .icon-menu {
 }
