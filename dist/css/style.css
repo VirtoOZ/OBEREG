@@ -135,7 +135,7 @@ body {
   text-shadow: 0 0 .0625rem #000
 }
 .bottom-menu {
-  justify-items: flex-end
+  justify-items: end
 }
 .icon-menu {
   display: none
@@ -646,7 +646,37 @@ body {
     display: none
   }
   .top-footer__left .button-red {
-    width: 100%
+    width: 100%;
+    -webkit-animation: pulse 3s infinite linear 1s;
+    animation: pulse 3s infinite linear 1s
+  }
+  @-webkit-keyframes pulse {
+    0% {
+      color: #dcdedf;
+      box-shadow: 0 0 .4375rem rgba(255,255,255,0)
+    }
+    50% {
+      color: #fff;
+      box-shadow: 0 0 .4375rem #fff
+    }
+    100% {
+      color: #dcdedf;
+      box-shadow: 0 0 .4375rem rgba(255,255,255,0)
+    }
+  }
+  @keyframes pulse {
+    0% {
+      color: #dcdedf;
+      box-shadow: 0 0 .4375rem rgba(255,255,255,0)
+    }
+    50% {
+      color: #fff;
+      box-shadow: 0 0 .4375rem #fff
+    }
+    100% {
+      color: #dcdedf;
+      box-shadow: 0 0 .4375rem rgba(255,255,255,0)
+    }
   }
   .top-footer__left {
     flex: 1 1 auto
