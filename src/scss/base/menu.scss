@@ -13,10 +13,12 @@
 	}
 	// .menu__list
 	&__list {
-		display: flex;
-		align-items: center;
-		@include adaptiveValue("column-gap", 50, 0, 2, 1920, 768);
-		flex-wrap: wrap;
+		@media (min-width: $tablet) {
+			display: flex;
+			align-items: center;
+			@include adaptiveValue("column-gap", 50, 0, 2, 1920, 768);
+			flex-wrap: wrap;
+		}
 	}
 	// .menu__item
 	&__item {
@@ -45,9 +47,9 @@
 		@media (max-width: $tablet) {
 			&.button {
 				display: block;
-				@include adaptiveValue("padding-top", 20, 15);
-				@include adaptiveValue("padding-bottom", 20, 15);
-				@include adaptiveValue("font-size", 20, 13);
+				// @include adaptiveValue("padding-top", 20, 15);
+				// @include adaptiveValue("padding-bottom", 20, 15);
+				// @include adaptiveValue("font-size", 20, 13);
 			}
 		}
 	}
@@ -55,6 +57,8 @@
 .top-menu {
 }
 .bottom-menu {
+	// display: flex;
+	// flex-direction: column;
 }
 
 //</MENU>=======================================
