@@ -2,8 +2,7 @@
 .header {
 	width: 100%;
 	position: relative;
-	z-index: 3;
-	// @include adaptiveValue("min-height", 100, 50);
+	z-index: 5;
 	// .header__text
 	&__text {
 		@include adaptiveValue("font-size", 50, 20);
@@ -27,9 +26,6 @@
 		text-transform: uppercase;
 		justify-items: center;
 		justify-self: center;
-		// display: flex;
-		// flex-direction: column;
-		// align-items: center;
 		@include adaptiveValue("width", 66, 45);
 		img {
 			animation: logo 10s infinite linear;
@@ -52,12 +48,13 @@
 	}
 	// .header__top
 	&__top {
-		// flex: 1 1 45%;
 	}
 	// .header__bottom
 	&__bottom {
-		// justify-self: end;
-		justify-items: end;
+		@media (max-width: $tablet) {
+			display: flex;
+			justify-content: flex-end;
+		}
 	}
 }
 

@@ -203,7 +203,7 @@ body {
 .header {
   width: 100%;
   position: relative;
-  z-index: 3
+  z-index: 5
 }
 .header__logo {
   display: inline-block;
@@ -239,9 +239,6 @@ body {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg)
   }
-}
-.header__bottom {
-  justify-items: end
 }
 .footer {
   position: relative;
@@ -661,6 +658,10 @@ body {
   .button {
     padding-top: .9375rem;
     padding-bottom: .9375rem
+  }
+  .header__bottom {
+    display: flex;
+    justify-content: flex-end
   }
 }
 @media (max-width:61.99875em)and (any-hover:none) {
