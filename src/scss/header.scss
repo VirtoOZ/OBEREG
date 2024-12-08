@@ -21,6 +21,7 @@
 	}
 	// .header__logo
 	&__logo {
+		display: inline-block;
 		color: #fff;
 		@include adaptiveValue("font-size", 22, 13);
 		text-transform: uppercase;
@@ -33,9 +34,9 @@
 		img {
 			animation: logo 10s infinite linear;
 			max-width: 100%;
-			&:not(:last-child) {
-				margin-bottom: rem(10);
-			}
+			// &:not(:last-child) {
+			// 	margin-bottom: rem(10);
+			// }
 		}
 		@keyframes logo {
 			0% {

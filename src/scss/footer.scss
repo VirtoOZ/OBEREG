@@ -1,10 +1,12 @@
 //<FOOTER>=================================
 .footer {
 	position: relative;
-	z-index: 2;
+	z-index: 5;
 	@media (max-width: $mobileSmall) {
 		.footer__bg {
-			transform: translate(0px, 100%);
+		}
+		.footer__bottom {
+			// display: none;
 		}
 	}
 	// .footer__container
@@ -12,7 +14,13 @@
 	}
 	// .footer__body
 	&__body {
-		@include adaptiveValue("margin-bottom", 30, 0, 2, 480, 320);
+		@include adaptiveValue("margin-bottom", 30, 10);
+		@media (min-width: $mobile) {
+			margin-top: 0;
+		}
+		@media (min-width: $mobileBig) {
+			@include adaptiveValue("margin-top", 30, 10);
+		}
 	}
 	// .footer__top
 	&__top {
@@ -33,6 +41,7 @@
 	&__bg {
 		position: relative;
 		background-color: #383e42;
+		transform: translate(0px, 0px);
 		transition: transform 0.3s ease 0s;
 		&::before {
 			content: "";
@@ -46,14 +55,19 @@
 	}
 }
 .top-footer {
+	@media (max-width: $mobileBig) {
+	}
 	// .top-footer__left
 	&__left {
 		display: flex;
 		@include adaptiveValue("column-gap", 30, 10);
 		@include adaptiveValue("row-gap", 30, 10);
+		@media (max-width: $mobileBig) {
+			// flex: 1 1 auto;
+		}
 		@media (max-width: $mobileSmall) {
+			// flex: 1 1 auto;
 			& .button-blur {
-				display: none;
 			}
 			& .button-red {
 				width: 100%;
@@ -73,13 +87,12 @@
 					}
 				}
 			}
-			& {
-				flex: 1 1 auto;
-			}
 			& .button {
-				padding-top: rem(15);
-				padding-bottom: rem(15);
+				// @include adaptiveValue("font-size", , );
 			}
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
 		}
 	}
 	// .top-footer__right
@@ -93,6 +106,9 @@
 	}
 	// .top-footer__button
 	&__button {
+		@media (max-width: $mobileBig) {
+			flex: 1 1 50%;
+		}
 	}
 }
 .bottom-footer {

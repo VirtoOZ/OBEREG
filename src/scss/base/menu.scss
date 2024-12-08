@@ -3,7 +3,7 @@
 	// .menu__body
 	&__body {
 		display: grid;
-		grid-template-columns: 1fr minmax(rem(70), rem(110)) 1fr;
+		grid-template-columns: 1fr rem(50) 1fr;
 		align-items: center;
 		justify-content: space-between;
 		@include adaptiveValue("column-gap", 40, 0);
@@ -45,8 +45,9 @@
 		@media (max-width: $tablet) {
 			&.button {
 				display: block;
-				@include adaptiveValue("padding-top", 25, 15);
-				@include adaptiveValue("padding-bottom", 25, 15);
+				@include adaptiveValue("padding-top", 20, 15);
+				@include adaptiveValue("padding-bottom", 20, 15);
+				@include adaptiveValue("font-size", 20, 13);
 			}
 		}
 	}
@@ -54,7 +55,6 @@
 .top-menu {
 }
 .bottom-menu {
-	// justify-items: end;
 }
 
 //</MENU>=======================================
