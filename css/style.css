@@ -682,6 +682,16 @@ body {
   }
 }
 @media (max-width:29.99875em) {
+  .menu__link.button {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    font-size: 0
+  }
+  .menu__link.button::before {
+    content: "";
+    background: url(img/icons/phone.svg) 50% 50% no-repeat
+  }
   .top-footer__left .button-red {
     width: 100%;
     -webkit-animation: pulse 3s infinite linear 1s;
