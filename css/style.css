@@ -221,6 +221,9 @@ body {
   animation: logo 10s infinite linear;
   max-width: 100%
 }
+.header__logo img:not(:last-child) {
+  margin-bottom: .625rem
+}
 @-webkit-keyframes logo {
   0% {
     -webkit-transform: rotate(0);
