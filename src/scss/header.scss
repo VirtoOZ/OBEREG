@@ -34,9 +34,9 @@
 		img {
 			animation: logo 10s infinite linear;
 			max-width: 100%;
-			// &:not(:last-child) {
-			// 	margin-bottom: rem(10);
-			// }
+			&:not(:last-child) {
+				margin-bottom: rem(10);
+			}
 		}
 		@keyframes logo {
 			0% {
