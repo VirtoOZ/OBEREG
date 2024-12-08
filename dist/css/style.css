@@ -125,7 +125,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 3.125rem 1fr;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
+  margin: 0 .625rem
 }
 .menu__link {
   color: #dcdedf;
@@ -298,7 +299,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 4;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -315,6 +316,16 @@ body {
   line-height: 1.5;
   color: #fff;
   text-shadow: 0 0 .0625rem #000
+}
+.main__video::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.4)
 }
 .main__video video {
   position: absolute;
@@ -333,7 +344,7 @@ body {
   height: 100%;
   bottom: 0;
   right: .625rem;
-  z-index: 2
+  z-index: 3
 }
 .buttons-main__left {
   display: flex
@@ -571,10 +582,10 @@ body {
     margin-bottom: 1rem
   }
   .main__awards {
-    width: 6.25rem
+    width: 5rem
   }
   .main__awards {
-    height: 6.25rem
+    height: 5rem
   }
   .buttons-main__left {
     -webkit-column-gap: 1.25rem;
@@ -677,20 +688,21 @@ body {
   .top-footer__left {
     flex-direction: column
   }
-  .main__awards {
-    display: none
-  }
 }
 @media (max-width:29.99875em) {
   .menu__link.button {
-    position: relative;
-    width: 60px;
-    height: 60px;
+    width: 3.75rem;
+    height: 3.4375rem;
     font-size: 0
   }
   .menu__link.button::before {
     content: "";
-    background: url(img/icons/phone.svg) 50% 50% no-repeat
+    width: 100%;
+    height: 100%;
+    background: url(img/icons/phone.svg) 50% 50% no-repeat;
+    transition: -webkit-transform .3s ease 0s;
+    transition: transform .3s ease 0s;
+    transition: transform .3s ease 0s,-webkit-transform .3s ease 0s
   }
   .top-footer__left .button-red {
     width: 100%;
@@ -724,6 +736,12 @@ body {
       color: #dcdedf;
       box-shadow: 0 0 .4375rem rgba(255,255,255,0)
     }
+  }
+}
+@media (max-width:29.99875em)and (any-hover:hover) {
+  .menu__link.button:hover::before {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
   }
 }
 @media (min-width:20em)and (max-width:160em) {
@@ -993,24 +1011,24 @@ body {
       margin-bottom: calc(1rem + .5625*(100vw - 20rem)/ 140)
     }
   }
-  @supports (width:clamp(6.25rem ,5.8928571429rem + 1.7857142857vw ,8.75rem)) {
+  @supports (width:clamp(5rem ,4.4642857143rem + 2.6785714286vw ,8.75rem)) {
     .main__awards {
-      width: clamp(6.25rem ,5.8928571429rem + 1.7857142857vw ,8.75rem)
+      width: clamp(5rem ,4.4642857143rem + 2.6785714286vw ,8.75rem)
     }
   }
-  @supports not (width:clamp(6.25rem ,5.8928571429rem + 1.7857142857vw ,8.75rem)) {
+  @supports not (width:clamp(5rem ,4.4642857143rem + 2.6785714286vw ,8.75rem)) {
     .main__awards {
-      width: calc(6.25rem + 2.5*(100vw - 20rem)/ 140)
+      width: calc(5rem + 3.75*(100vw - 20rem)/ 140)
     }
   }
-  @supports (height:clamp(6.25rem ,5.8928571429rem + 1.7857142857vw ,8.75rem)) {
+  @supports (height:clamp(5rem ,4.4642857143rem + 2.6785714286vw ,8.75rem)) {
     .main__awards {
-      height: clamp(6.25rem ,5.8928571429rem + 1.7857142857vw ,8.75rem)
+      height: clamp(5rem ,4.4642857143rem + 2.6785714286vw ,8.75rem)
     }
   }
-  @supports not (height:clamp(6.25rem ,5.8928571429rem + 1.7857142857vw ,8.75rem)) {
+  @supports not (height:clamp(5rem ,4.4642857143rem + 2.6785714286vw ,8.75rem)) {
     .main__awards {
-      height: calc(6.25rem + 2.5*(100vw - 20rem)/ 140)
+      height: calc(5rem + 3.75*(100vw - 20rem)/ 140)
     }
   }
   @supports ((-moz-column-gap:clamp(1.25rem ,0.9821428571rem + 1.3392857143vw ,3.125rem)) or (column-gap:clamp(1.25rem ,0.9821428571rem + 1.3392857143vw ,3.125rem))) {
