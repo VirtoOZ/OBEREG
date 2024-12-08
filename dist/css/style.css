@@ -371,6 +371,14 @@ body {
     column-gap: 3.125rem
   }
 }
+@media (min-width:61.99875em)and (min-width:160em) {
+  .button {
+    padding-top: .625rem
+  }
+  .button {
+    padding-bottom: .625rem
+  }
+}
 @media (min-width:160em) {
   .menu__body {
     -webkit-column-gap: 2.5rem;
@@ -379,12 +387,6 @@ body {
   }
   .menu__link {
     font-size: 1.25rem
-  }
-  .button {
-    padding-top: .625rem
-  }
-  .button {
-    padding-bottom: .625rem
   }
   .button {
     padding-left: 1.875rem
@@ -492,12 +494,6 @@ body {
   }
   .menu__link {
     font-size: .8125rem
-  }
-  .button {
-    padding-top: .3125rem
-  }
-  .button {
-    padding-bottom: .3125rem
   }
   .button {
     padding-left: .3125rem
@@ -743,26 +739,6 @@ body {
   @supports not (font-size:clamp(0.8125rem ,0.75rem + 0.3125vw ,1.25rem)) {
     .menu__link {
       font-size: calc(.8125rem + .4375*(100vw - 20rem)/ 140)
-    }
-  }
-  @supports (padding-top:clamp(0.3125rem ,0.2678571429rem + 0.2232142857vw ,0.625rem)) {
-    .button {
-      padding-top: clamp(.3125rem ,.2678571429rem + .2232142857vw ,.625rem)
-    }
-  }
-  @supports not (padding-top:clamp(0.3125rem ,0.2678571429rem + 0.2232142857vw ,0.625rem)) {
-    .button {
-      padding-top: calc(.3125rem + .3125*(100vw - 20rem)/ 140)
-    }
-  }
-  @supports (padding-bottom:clamp(0.3125rem ,0.2678571429rem + 0.2232142857vw ,0.625rem)) {
-    .button {
-      padding-bottom: clamp(.3125rem ,.2678571429rem + .2232142857vw ,.625rem)
-    }
-  }
-  @supports not (padding-bottom:clamp(0.3125rem ,0.2678571429rem + 0.2232142857vw ,0.625rem)) {
-    .button {
-      padding-bottom: calc(.3125rem + .3125*(100vw - 20rem)/ 140)
     }
   }
   @supports (padding-left:clamp(0.3125rem ,0.0892857143rem + 1.1160714286vw ,1.875rem)) {
@@ -1090,6 +1066,36 @@ body {
       -moz-column-gap: calc(.0000000625rem + 3.1249999375*(100vw - 48rem)/ 72);
       column-gap: calc(.0000000625rem + 3.1249999375*(100vw - 48rem)/ 72)
     }
+  }
+}
+@media (min-width:61.99875em)and (min-width:20em)and (max-width:160em) {
+  @supports (padding-top:clamp(0.3125rem ,0.2678571429rem + 0.2232142857vw ,0.625rem)) {
+    .button {
+      padding-top: clamp(.3125rem ,.2678571429rem + .2232142857vw ,.625rem)
+    }
+  }
+  @supports not (padding-top:clamp(0.3125rem ,0.2678571429rem + 0.2232142857vw ,0.625rem)) {
+    .button {
+      padding-top: calc(.3125rem + .3125*(100vw - 20rem)/ 140)
+    }
+  }
+  @supports (padding-bottom:clamp(0.3125rem ,0.2678571429rem + 0.2232142857vw ,0.625rem)) {
+    .button {
+      padding-bottom: clamp(.3125rem ,.2678571429rem + .2232142857vw ,.625rem)
+    }
+  }
+  @supports not (padding-bottom:clamp(0.3125rem ,0.2678571429rem + 0.2232142857vw ,0.625rem)) {
+    .button {
+      padding-bottom: calc(.3125rem + .3125*(100vw - 20rem)/ 140)
+    }
+  }
+}
+@media (min-width:61.99875em)and (max-width:20em) {
+  .button {
+    padding-top: .3125rem
+  }
+  .button {
+    padding-bottom: .3125rem
   }
 }
 @media (max-width:61.99875em)and (min-width:160em) {

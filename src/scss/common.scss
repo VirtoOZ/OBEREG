@@ -1,7 +1,5 @@
 // Заголовки, общие БЄМ блоки и проче...
 .button {
-	@include adaptiveValue("padding-top", 10, 5);
-	@include adaptiveValue("padding-bottom", 10, 5);
 	@include adaptiveValue("padding-left", 30, 5);
 	@include adaptiveValue("padding-right", 30, 5);
 	border-radius: rem(25);
@@ -31,9 +29,11 @@
 			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
 		}
 	}
+	@media (min-width: $tablet) {
+		@include adaptiveValue("padding-top", 10, 5);
+		@include adaptiveValue("padding-bottom", 10, 5);
+	}
 	@media (max-width: $tablet) {
-		// @include adaptiveValue("padding-top", 15, 10);
-		// @include adaptiveValue("padding-bottom", 15, 10);
 		padding-top: rem(15);
 		padding-bottom: rem(15);
 		@include adaptiveValue("font-size", 20, 16);
