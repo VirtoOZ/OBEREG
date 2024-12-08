@@ -55,7 +55,7 @@ $responsiveType: 1;
 // <BODY>=================================
 body {
 	background: $mainBgColor;
-	color: $mainColor;
+	color: $mainTextColor;
 	// @include adaptiveValue("font-size", 25, 18);
 	font-weight: 300;
 	// Скролл заблокирован
@@ -224,9 +224,9 @@ body {
 	}
 	// .main__buttons
 	&__buttons {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		// display: flex;
+		// align-items: center;
+		// justify-content: space-between;
 	}
 }
 .buttons-main {

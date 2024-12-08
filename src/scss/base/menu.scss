@@ -2,8 +2,10 @@
 .menu {
 	// .menu__body
 	&__body {
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr minmax(rem(70), rem(110)) 1fr;
 		align-items: center;
+		justify-content: space-between;
 		@include adaptiveValue("column-gap", 40, 0);
 	}
 	// .menu__icon
@@ -22,34 +24,29 @@
 			@media (max-width: $tablet) {
 				display: none;
 			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: #fff;
+					text-shadow: 0 0 rem(3) #000;
+					font-weight: 400;
+				}
+			}
 		}
 	}
 	// .menu__link
 	&__link {
 		@include adaptiveValue("font-size", 20, 13);
-		color: #fff;
+		color: $mainTextColor;
+		line-height: math.div(26.4, 20);
 		text-shadow: 0 0 rem(1) #000;
+		transition:
+			color 0.3s ease 0s,
+			text-shadow 0.3s ease 0s;
 		@media (max-width: $tablet) {
 			&.button {
 				display: block;
 				@include adaptiveValue("padding-top", 25, 15);
 				@include adaptiveValue("padding-bottom", 25, 15);
-				font-weight: 400;
-				animation: pulse 3s infinite linear;
-				@keyframes pulse {
-					0% {
-						color: $mainTextColor;
-						box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
-					}
-					50% {
-						color: #fff;
-						box-shadow: 0 0 rem(7) rgba(255, 255, 255, 1);
-					}
-					100% {
-						color: $mainTextColor;
-						box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
-					}
-				}
 			}
 		}
 	}
@@ -57,7 +54,7 @@
 .top-menu {
 }
 .bottom-menu {
-	justify-items: end;
+	// justify-items: end;
 }
 
 //</MENU>=======================================
