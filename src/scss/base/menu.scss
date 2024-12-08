@@ -47,9 +47,18 @@
 		@media (max-width: $tablet) {
 			&.button {
 				display: block;
-				// @include adaptiveValue("padding-top", 20, 15);
-				// @include adaptiveValue("padding-bottom", 20, 15);
-				// @include adaptiveValue("font-size", 20, 13);
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			&.button {
+				position: relative;
+				width: 60px;
+				height: 60px;
+				font-size: 0;
+				&::before {
+					content: "";
+					background: url("img/icons/phone.svg") 50% 50% no-repeat;
+				}
 			}
 		}
 	}
@@ -57,8 +66,6 @@
 .top-menu {
 }
 .bottom-menu {
-	// display: flex;
-	// flex-direction: column;
 }
 
 //</MENU>=======================================
