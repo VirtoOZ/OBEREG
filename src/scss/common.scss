@@ -40,8 +40,8 @@
 	}
 }
 .button-red {
-	background-color: #792423;
-	border: rem(1) solid #792423;
+	background-color: $mainColor;
+	border: rem(1) solid $mainColor;
 	@media (any-hover: hover) {
 		&:hover {
 			border: rem(1) solid #fff;
@@ -66,6 +66,12 @@
 .icon-menu {
 }
 
+.menu-open {
+	.button-blur {
+		// border: rem(1) solid $mainColor;
+		// color: $mainColor;
+	}
+}
 //<GLOBAL Animations>=================================
 
 //</GLOBAL Animations>=================================

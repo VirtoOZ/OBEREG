@@ -7,7 +7,6 @@
 		align-items: center;
 		justify-content: space-between;
 		@include adaptiveValue("column-gap", 40, 0);
-		margin: rem(0) rem(10);
 	}
 	// .menu__icon
 	&__icon {
@@ -146,3 +145,56 @@
 	}
 }
 //</BURGER>=================================
+.menu-open {
+	@media (max-width: $tablet) {
+		.menu__body {
+			@include adaptiveValue("padding-top", 103, 80);
+			padding-right: rem(30);
+			padding-left: rem(30);
+			padding-bottom: rem(30);
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $mainTextColor;
+			display: block;
+		}
+		.header__bottom {
+			display: block;
+		}
+		.menu__link {
+			font-size: 20px;
+			display: block;
+			@include adaptiveValue("margin-bottom", 30, 10);
+			color: $mainColor;
+		}
+		.menu__link.button {
+			font-size: 16px;
+			width: auto;
+			height: auto;
+			&::before {
+				display: none;
+			}
+		}
+		.top-footer__button {
+			position: relative;
+			z-index: 5;
+		}
+
+		.top-footer__right {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.icon-menu {
+			position: fixed;
+			top: rem(38);
+			left: rem(10);
+			span,
+			&::before,
+			&::after {
+				background-color: $mainColor;
+			}
+		}
+	}
+}
