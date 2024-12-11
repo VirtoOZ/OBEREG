@@ -54,6 +54,8 @@
 .button-blur {
 	backdrop-filter: blur(rem(5));
 	border: rem(1) solid $mainTextColor;
+	// md
+
 	@media (any-hover: hover) {
 		&:hover {
 			border: rem(1) solid #fff;
@@ -72,6 +74,30 @@
 		// color: $mainColor;
 	}
 }
+
+.nav-btn {
+	padding-left: rem(50);
+	margin-left: rem(-70);
+	@include adaptiveValue("margin-bottom", 30, 20);
+	padding-right: rem(15);
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 30px;
+		height: 10px;
+	}
+	@extend --btn-gray;
+}
+
+--btn-gray {
+	border-color: #383e42;
+	color: #383e42;
+}
+
+--text-shadow-red {
+	text-shadow: 0 0 5px $mainColor;
+}
+
 //<GLOBAL Animations>=================================
 
 //</GLOBAL Animations>=================================

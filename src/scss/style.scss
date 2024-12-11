@@ -78,7 +78,7 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
+	// overflow: hidden;
 	position: relative;
 	// Прижимаем footer
 	> main {
@@ -152,7 +152,7 @@ body {
 @import "header";
 @import "footer";
 // Подключение стилей отдельных страниц
-// @import "home";
+@import "about";
 // </IMPORT>=================================
 
 // <ОБЩИЙ СТИЛЬ>=================================
@@ -161,6 +161,9 @@ body {
 	position: relative;
 	// .page__main
 	&__main {
+	}
+	// .page__about
+	&__about {
 	}
 }
 //</ОБЩИЕ СТИЛИ>=================================
