@@ -61,7 +61,7 @@
 		line-height: math.div(74.8, 68);
 		color: #383e42;
 		&:not(:last-child) {
-			margin-bottom: rem(10);
+			@include adaptiveValue("margin-bottom", 40, 25);
 		}
 	}
 	// .content__text
@@ -70,11 +70,14 @@
 		line-height: math.div(30, 20);
 		color: #383e42;
 		&:not(:last-child) {
-			margin-bottom: rem(10);
+			@include adaptiveValue("margin-bottom", 40, 25);
 		}
 	}
 	// .content__list
 	&__list {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 25);
+		}
 	}
 	// .content__item
 	&__item {
