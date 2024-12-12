@@ -77,7 +77,7 @@
 
 .nav-btn {
 	padding-left: rem(50);
-	margin-left: rem(-70);
+	margin-left: -10%;
 	@include adaptiveValue("margin-bottom", 30, 20);
 	padding-right: rem(15);
 	&::before {

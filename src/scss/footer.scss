@@ -63,9 +63,7 @@
 		display: flex;
 		@include adaptiveValue("column-gap", 30, 10);
 		@include adaptiveValue("row-gap", 30, 10);
-		@media (max-width: $mobileBig) {
-			// flex: 1 1 auto;
-		}
+
 		@media (max-width: $mobileSmall) {
 			// flex: 1 1 auto;
 			& .button-blur {
@@ -94,6 +92,12 @@
 		}
 		@media (max-width: $mobile) {
 			flex-direction: column;
+		}
+	}
+	// .top-footer__left-home
+	&__left-home {
+		@media (max-width: $mobileBig) {
+			flex: 1 1 auto;
 		}
 	}
 	// .top-footer__right
