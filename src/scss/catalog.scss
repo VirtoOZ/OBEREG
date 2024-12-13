@@ -81,7 +81,7 @@
 	&__name {
 		@include adaptiveValue("font-size", 27, 22);
 		line-height: math.div(32.4, 27);
-		color: #383e42;
+		color: $grayColor;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 17, 10);
 		}
@@ -95,7 +95,7 @@
 	&__price {
 		@include adaptiveValue("font-size", 28, 22);
 		line-height: math.div(33.6, 28);
-		color: #383e42;
+		color: $grayColor;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 13, 10);
 		}
@@ -105,7 +105,7 @@
 	// .info-catalog__item-title
 	&__item-title {
 		font-size: rem(18);
-		color: #383e42;
+		color: $grayColor;
 		font-weight: 500;
 		line-height: math.div(27, 18);
 	}
@@ -115,7 +115,7 @@
 	// .info-catalog__item
 	&__item {
 		font-size: rem(18);
-		color: #383e42;
+		color: $grayColor;
 		line-height: math.div(27, 18);
 	}
 	// .info-catalog__link

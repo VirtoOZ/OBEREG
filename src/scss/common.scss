@@ -14,8 +14,9 @@
 		border 0.3s ease 0s,
 		box-shadow 0.3s ease 0s,
 		text-shadow 0.3s ease 0s;
-	animation: pulse 3s infinite linear;
-	@keyframes pulse {
+	animation: pulse-wight 3s infinite linear;
+
+	@keyframes pulse-wight {
 		0% {
 			color: $mainTextColor;
 			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
@@ -54,8 +55,6 @@
 .button-blur {
 	backdrop-filter: blur(rem(5));
 	border: rem(1) solid $mainTextColor;
-	// md
-
 	@media (any-hover: hover) {
 		&:hover {
 			border: rem(1) solid #fff;
@@ -67,14 +66,12 @@
 }
 .icon-menu {
 }
-
 .menu-open {
 	.button-blur {
 		// border: rem(1) solid $mainColor;
 		// color: $mainColor;
 	}
 }
-
 .nav-btn {
 	padding-left: rem(50);
 	margin-left: -10%;
@@ -90,14 +87,48 @@
 }
 
 --btn-gray {
-	border-color: #383e42;
-	color: #383e42;
+	border-color: $grayColor;
+	color: $grayColor;
 }
 
 --text-shadow-red {
 	text-shadow: 0 0 5px $mainColor;
 }
 
+--anim-gray {
+	animation: pulse-gray 3s infinite linear;
+	@keyframes pulse-gray {
+		0% {
+			color: $grayColor;
+			box-shadow: 0 0 rem(7) rgba(56, 62, 66, 0);
+		}
+		50% {
+			color: $mainColor;
+			box-shadow: 0 0 rem(7) rgba(56, 62, 66, 1);
+		}
+		100% {
+			color: $grayColor;
+			box-shadow: 0 0 rem(7) rgba(56, 62, 66, 0);
+		}
+	}
+}
+--anim-red {
+	animation: pulse-red 3s infinite linear;
+	@keyframes pulse-red {
+		0% {
+			color: $grayColor;
+			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 0);
+		}
+		50% {
+			color: $mainColor;
+			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 1);
+		}
+		100% {
+			color: $grayColor;
+			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 0);
+		}
+	}
+}
 //<GLOBAL Animations>=================================
 
 //</GLOBAL Animations>=================================

@@ -59,7 +59,7 @@
 	&__title {
 		@include adaptiveValue("font-size", 68, 40);
 		line-height: math.div(74.8, 68);
-		color: #383e42;
+		color: $grayColor;
 		&:not(:last-child) {
 			margin-bottom: rem(10);
 		}
@@ -76,7 +76,7 @@
 	&__text {
 		@include adaptiveValue("font-size", 20, 16);
 		line-height: math.div(30, 20);
-		color: #383e42;
+		color: $grayColor;
 		&:not(:last-child) {
 			margin-bottom: rem(10);
 		}

@@ -9,7 +9,7 @@
 //&display=swap - добавить при подключении через плагин
 // @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap);
 @import "fonts/fonts"; // Подключить если есть локальные файлы шрифтов
-// @import "fonts/icons"; // Подключить если есть файл иконочного шрифта
+@import "fonts/icons"; // Подключить если есть файл иконочного шрифта
 // </ШРИФТ></IMPORT>=================================
 
 // <VARIABLES>=================================
@@ -19,11 +19,11 @@ $fontSize: rem(16); // где 14(px) - размер шрифта по умолч
 $blueColor: #4475f2;
 $mainColor: #792423;
 $mainTextColor: #dcdedf;
-$lightGrayColor: #9a9ea6;
+$grayColor: #383e42;
 $lightBlueColor: #23a6f0;
 $darkBlueColor: #181e4b;
 $hoverCololr: #4737ff;
-$mainBgColor: #fafafa; //приглушить цвет для комфорта глаз
+$mainBgColor: #dcdedf; //приглушить цвет для комфорта глаз
 
 // Настройки адаптивной сетки
 $minWidth: 320; // Минимальная ширина страницы

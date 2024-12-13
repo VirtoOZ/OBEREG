@@ -65,7 +65,7 @@
 	&__title {
 		@include adaptiveValue("font-size", 68, 40);
 		line-height: math.div(74.8, 68);
-		color: #383e42;
+		color: $grayColor;
 		hyphens: auto;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 40, 25);
@@ -75,7 +75,7 @@
 	&__text {
 		@include adaptiveValue("font-size", 20, 16);
 		line-height: math.div(30, 20);
-		color: #383e42;
+		color: $grayColor;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 40, 25);
 		}
@@ -90,7 +90,7 @@
 	&__item {
 		@include adaptiveValue("font-size", 20, 16);
 		position: relative;
-		color: #383e42;
+		color: $grayColor;
 		padding-left: rem(15);
 		&::before {
 			content: "";

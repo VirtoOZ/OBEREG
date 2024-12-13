@@ -3,10 +3,37 @@
 	// .menu__body
 	&__body {
 		display: grid;
-		grid-template-columns: 1fr rem(50) 1fr;
+		grid-template-columns: 1fr 1fr;
 		align-items: center;
 		justify-content: space-between;
-		@include adaptiveValue("column-gap", 40, 0);
+		column-gap: rem(60);
+		transition: top 0.5s ease-out 0s;
+		overflow: auto;
+		// @include adaptiveValue("column-gap", 60, 40);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("padding-top", 103, 60);
+			padding-right: rem(30);
+			padding-left: rem(30);
+			padding-bottom: rem(30);
+			position: fixed;
+			top: -110%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $mainTextColor;
+			display: block;
+			&::before {
+				content: "";
+				position: fixed;
+				z-index: 5;
+				width: 100%;
+				@include adaptiveValue("height", 103, 60);
+				top: -100%;
+				left: 0;
+				background-color: $mainTextColor;
+				transition: top 0.5s ease-out 0s;
+			}
+		}
 	}
 	// .menu__icon
 	&__icon {
@@ -24,7 +51,7 @@
 	&__item {
 		.menu__link {
 			@media (max-width: $tablet) {
-				display: none;
+				// display: none;
 			}
 			@media (any-hover: hover) {
 				&:hover {
@@ -44,22 +71,23 @@
 		transition:
 			color 0.3s ease 0s,
 			text-shadow 0.3s ease 0s;
-		@media (max-width: $tablet) {
-			&.button {
-				display: block;
-			}
+	}
+	// .menu__tel
+	&__tel {
+		position: relative;
+		z-index: 2;
+		&::before {
+			font-size: 0;
 		}
 		@media (max-width: $mobileSmall) {
 			&.button {
-				width: rem(60);
-				height: rem(55);
 				font-size: 0;
+				padding-top: rem(8);
+				padding-bottom: rem(8);
+				padding-left: rem(15);
+				padding-right: rem(15);
 				&::before {
-					content: "";
-					width: 100%;
-					height: 100%;
-					background: url("../img/icons/phone.svg") 50% 50% no-repeat;
-					transition: transform 0.3s ease 0s;
+					font-size: rem(20);
 				}
 				@media (any-hover: hover) {
 					&:hover {
@@ -72,9 +100,9 @@
 		}
 	}
 }
-.top-menu {
+.left-menu {
 }
-.bottom-menu {
+.right-menu {
 }
 
 //</MENU>=======================================
@@ -139,6 +167,7 @@
 			&::before,
 			&::after {
 				box-shadow: none;
+				background-color: $grayColor;
 			}
 		}
 		//</MENU-OPEN>=================================
@@ -146,54 +175,57 @@
 }
 //</BURGER>=================================
 .menu-open {
+	.menu__tel {
+		border: rem(1) solid $grayColor;
+		@extend --anim-red;
+	}
+	.top-footer__button {
+		border: rem(1) solid $grayColor;
+		@extend --anim-gray;
+	}
 	@media (max-width: $tablet) {
-		.menu__body {
-			@include adaptiveValue("padding-top", 103, 80);
-			padding-right: rem(30);
-			padding-left: rem(30);
-			padding-bottom: rem(30);
-			position: fixed;
+		& .menu__body {
 			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: $mainTextColor;
-			display: block;
+			&::before {
+				top: 0;
+			}
 		}
-		.header__bottom {
+		.header__right {
 			display: block;
+			&:not(:last-child) {
+				margin-bottom: rem(30);
+			}
+		}
+		//
+		.menu__item .menu__link {
+			@media (any-hover: hover) {
+				&:hover {
+					color: $mainColor;
+					text-shadow: 0 0 rem(5) $mainColor;
+					font-weight: 400;
+				}
+			}
 		}
 		.menu__link {
 			font-size: 20px;
 			display: block;
 			@include adaptiveValue("margin-bottom", 30, 10);
-			color: $mainColor;
-		}
-		.menu__link.button {
-			font-size: 16px;
-			width: auto;
-			height: auto;
-			&::before {
-				display: none;
-			}
+			color: $grayColor;
 		}
 		.top-footer__button {
 			position: relative;
 			z-index: 5;
 		}
-
 		.top-footer__right {
 			display: flex;
 			flex-wrap: wrap;
 		}
-		.icon-menu {
-			position: fixed;
-			top: rem(38);
-			left: rem(10);
-			span,
-			&::before,
-			&::after {
-				background-color: $mainColor;
+		.header__logo {
+			color: $grayColor;
+			font-weight: 400;
+			text-shadow: 0px 0px 1px #000;
+			p {
+				display: none;
 			}
 		}
 	}

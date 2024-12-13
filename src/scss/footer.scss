@@ -41,7 +41,7 @@
 	// .footer__bg
 	&__bg {
 		position: relative;
-		background-color: #383e42;
+		background-color: $grayColor;
 		transform: translate(0px, 0px);
 		transition: transform 0.3s ease 0s;
 		&::before {
