@@ -11,7 +11,7 @@
 		overflow: auto;
 		// @include adaptiveValue("column-gap", 60, 40);
 		@media (max-width: $tablet) {
-			@include adaptiveValue("padding-top", 103, 60);
+			@include adaptiveValue("padding-top", 103, 70);
 			padding-right: rem(30);
 			padding-left: rem(30);
 			padding-bottom: rem(30);
@@ -27,7 +27,7 @@
 				position: fixed;
 				z-index: 5;
 				width: 100%;
-				@include adaptiveValue("height", 103, 60);
+				@include adaptiveValue("height", 103, 50);
 				top: -100%;
 				left: 0;
 				background-color: $mainTextColor;
@@ -71,6 +71,12 @@
 		transition:
 			color 0.3s ease 0s,
 			text-shadow 0.3s ease 0s;
+		@media (max-width: $tablet) {
+			font-size: 20px;
+			display: block;
+			@include adaptiveValue("margin-bottom", 30, 10);
+			color: $grayColor;
+		}
 	}
 	// .menu__tel
 	&__tel {
@@ -88,6 +94,7 @@
 				padding-right: rem(15);
 				&::before {
 					font-size: rem(20);
+					transition: transform 0.3s ease 0s;
 				}
 				@media (any-hover: hover) {
 					&:hover {
@@ -191,10 +198,6 @@
 			}
 		}
 		.header__right {
-			display: block;
-			&:not(:last-child) {
-				margin-bottom: rem(30);
-			}
 		}
 		//
 		.menu__item .menu__link {
@@ -207,10 +210,6 @@
 			}
 		}
 		.menu__link {
-			font-size: 20px;
-			display: block;
-			@include adaptiveValue("margin-bottom", 30, 10);
-			color: $grayColor;
 		}
 		.top-footer__button {
 			position: relative;
