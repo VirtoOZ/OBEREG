@@ -398,8 +398,10 @@ body {
   align-items: center
 }
 .header__right {
-  display: flex;
-  justify-content: flex-end
+  display: block
+}
+.header__right:not(:last-child) {
+  margin-bottom: 1.875rem
 }
 .footer {
   position: relative;
@@ -713,6 +715,10 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap
+  }
+  .header__right {
+    display: flex;
+    justify-content: flex-end
   }
   .about__body {
     display: flex
@@ -1195,6 +1201,11 @@ body {
     background-color: #dcdedf;
     transition: top .5s ease-out 0s
   }
+  .menu__link {
+    font-size: 20px;
+    display: block;
+    color: #383e42
+  }
   .icon-menu {
     display: block;
     position: relative;
@@ -1249,17 +1260,6 @@ body {
   .menu-open .menu__body::before {
     top: 0
   }
-  .menu-open .header__right {
-    display: block
-  }
-  .menu-open .header__right:not(:last-child) {
-    margin-bottom: 1.875rem
-  }
-  .menu-open .menu__link {
-    font-size: 20px;
-    display: block;
-    color: #383e42
-  }
   .menu-open .top-footer__button {
     position: relative;
     z-index: 5
@@ -1283,12 +1283,12 @@ body {
 }
 @media (max-width:61.99875em)and (max-width:20em) {
   .menu__body {
-    padding-top: 3.75rem
+    padding-top: 4.375rem
   }
   .menu__body::before {
-    height: 3.75rem
+    height: 3.125rem
   }
-  .menu-open .menu__link {
+  .menu__link {
     margin-bottom: .625rem
   }
   .button {
@@ -1338,7 +1338,10 @@ body {
     padding-right: .9375rem
   }
   .menu__tel.button::before {
-    font-size: 1.25rem
+    font-size: 1.25rem;
+    transition: -webkit-transform .3s ease 0s;
+    transition: transform .3s ease 0s;
+    transition: transform .3s ease 0s,-webkit-transform .3s ease 0s
   }
   .top-footer__left .button-red {
     width: 100%;
@@ -1387,7 +1390,7 @@ body {
   .menu__body::before {
     height: 6.4375rem
   }
-  .menu-open .menu__link {
+  .menu__link {
     margin-bottom: 1.875rem
   }
   .button {
@@ -1398,33 +1401,33 @@ body {
   }
 }
 @media (max-width:61.99875em)and (min-width:20em)and (max-width:160em) {
-  @supports (padding-top:clamp(3.75rem ,3.3660714286rem + 1.9196428571vw ,6.4375rem)) {
+  @supports (padding-top:clamp(4.375rem ,4.0803571429rem + 1.4732142857vw ,6.4375rem)) {
     .menu__body {
-      padding-top: clamp(3.75rem ,3.3660714286rem + 1.9196428571vw ,6.4375rem)
+      padding-top: clamp(4.375rem ,4.0803571429rem + 1.4732142857vw ,6.4375rem)
     }
   }
-  @supports not (padding-top:clamp(3.75rem ,3.3660714286rem + 1.9196428571vw ,6.4375rem)) {
+  @supports not (padding-top:clamp(4.375rem ,4.0803571429rem + 1.4732142857vw ,6.4375rem)) {
     .menu__body {
-      padding-top: calc(3.75rem + 2.6875*(100vw - 20rem)/ 140)
+      padding-top: calc(4.375rem + 2.0625*(100vw - 20rem)/ 140)
     }
   }
-  @supports (height:clamp(3.75rem ,3.3660714286rem + 1.9196428571vw ,6.4375rem)) {
+  @supports (height:clamp(3.125rem ,2.6517857143rem + 2.3660714286vw ,6.4375rem)) {
     .menu__body::before {
-      height: clamp(3.75rem ,3.3660714286rem + 1.9196428571vw ,6.4375rem)
+      height: clamp(3.125rem ,2.6517857143rem + 2.3660714286vw ,6.4375rem)
     }
   }
-  @supports not (height:clamp(3.75rem ,3.3660714286rem + 1.9196428571vw ,6.4375rem)) {
+  @supports not (height:clamp(3.125rem ,2.6517857143rem + 2.3660714286vw ,6.4375rem)) {
     .menu__body::before {
-      height: calc(3.75rem + 2.6875*(100vw - 20rem)/ 140)
+      height: calc(3.125rem + 3.3125*(100vw - 20rem)/ 140)
     }
   }
   @supports (margin-bottom:clamp(0.625rem ,0.4464285714rem + 0.8928571429vw ,1.875rem)) {
-    .menu-open .menu__link {
+    .menu__link {
       margin-bottom: clamp(.625rem ,.4464285714rem + .8928571429vw ,1.875rem)
     }
   }
   @supports not (margin-bottom:clamp(0.625rem ,0.4464285714rem + 0.8928571429vw ,1.875rem)) {
-    .menu-open .menu__link {
+    .menu__link {
       margin-bottom: calc(.625rem + 1.25*(100vw - 20rem)/ 140)
     }
   }
