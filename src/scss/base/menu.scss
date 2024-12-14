@@ -221,13 +221,11 @@
 		.menu__link {
 		}
 		.top-footer__button {
-			position: relative;
-			z-index: 5;
+			// position: relative;
+			// z-index: 5;
 		}
 		.top-footer__home-right,
 		.top-footer__right {
-			display: flex;
-			flex-wrap: wrap;
 		}
 		.header__logo {
 			color: $grayColor;

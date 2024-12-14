@@ -73,46 +73,15 @@
 .top-footer {
 	// .top-footer__home-left
 	&__home-left {
-		.top-footer__button {
-			@media (max-width: $mobile) {
-			}
-		}
 	}
 	// .top-footer__home-right
 	&__home-right {
-		@media (max-width: $tablet) {
-		}
-		.top-footer__button {
-			@media (max-width: $tablet) {
-			}
-		}
-		@media (max-width: $mobileBig) {
-		}
 	}
 	// .top-footer__left
 	&__left {
-		@media (max-width: $mobileBig) {
-			// flex: 1 1 auto;
-		}
-		@media (max-width: $mobileSmall) {
-			// flex: 1 1 auto;
-			& .button-blur {
-			}
-			& .button-red {
-				// width: 100%;
-				// animation: pulse 3s infinite linear 1s;
-			}
-			& .button {
-			}
-		}
-		@media (max-width: $mobile) {
-			flex-direction: column;
-		}
 	}
 	// .top-footer__right
 	&__right {
-		@media (max-width: $mobileBig) {
-		}
 	}
 	// .top-footer__column
 	&__column {
@@ -121,10 +90,6 @@
 	}
 	// .top-footer__button
 	&__button {
-		@media (max-width: $mobileSmall) {
-		}
-		@media (max-width: $mobile) {
-		}
 	}
 }
 .bottom-footer {
