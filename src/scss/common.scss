@@ -14,22 +14,7 @@
 		border 0.3s ease 0s,
 		box-shadow 0.3s ease 0s,
 		text-shadow 0.3s ease 0s;
-	animation: pulse-wight 3s infinite linear;
 
-	@keyframes pulse-wight {
-		0% {
-			color: $mainTextColor;
-			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
-		}
-		50% {
-			color: #fff;
-			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 1);
-		}
-		100% {
-			color: $mainTextColor;
-			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
-		}
-	}
 	@media (min-width: $tablet) {
 		@include adaptiveValue("padding-top", 10, 5);
 		@include adaptiveValue("padding-bottom", 10, 5);
@@ -64,26 +49,82 @@
 		}
 	}
 }
+.-anim-red {
+	animation: pulse-red 3s infinite linear;
+	@keyframes pulse-red {
+		0% {
+			color: $grayColor;
+			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 0);
+		}
+		50% {
+			color: $mainColor;
+			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 1);
+		}
+		100% {
+			color: $grayColor;
+			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 0);
+		}
+	}
+}
+.-anim-gray {
+	animation: pulse-gray 3s infinite linear;
+	@keyframes pulse-gray {
+		0% {
+			color: $grayColor;
+			box-shadow: 0 0 rem(7) rgba(56, 62, 66, 0);
+		}
+		50% {
+			color: $mainColor;
+			box-shadow: 0 0 rem(7) rgba(56, 62, 66, 1);
+		}
+		100% {
+			color: $grayColor;
+			box-shadow: 0 0 rem(7) rgba(56, 62, 66, 0);
+		}
+	}
+}
+.-anim-white {
+	animation: pulse-white 3s infinite linear;
+	@keyframes pulse-white {
+		0% {
+			color: $mainTextColor;
+			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
+		}
+		50% {
+			color: #fff;
+			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 1);
+		}
+		100% {
+			color: $mainTextColor;
+			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
+		}
+	}
+}
 .icon-menu {
 }
-.menu-open {
-	.button-blur {
-		// border: rem(1) solid $mainColor;
-		// color: $mainColor;
+
+.nav-button {
+	position: fixed;
+	left: 0;
+	z-index: 4;
+	&__next {
+	}
+	&__prev {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(10);
+		border-radius: rem(0) rem(25) rem(25) rem(0);
+		border-color: $grayColor;
+		// @extend --btn-gray;
+		// @extend --anim-white;
+		padding-right: rem(15);
+	}
+	&__btn {
+		&::before {
+		}
 	}
 }
-.nav-btn {
-	padding-left: rem(50);
-	margin-left: -10%;
-	@include adaptiveValue("margin-bottom", 30, 20);
-	padding-right: rem(15);
-	&::before {
-		content: "";
-		display: inline-block;
-		width: 30px;
-		height: 10px;
-	}
-	@extend --btn-gray;
+.buttons-footer {
 }
 
 --btn-gray {
@@ -114,20 +155,6 @@
 }
 --anim-red {
 	animation: pulse-red 3s infinite linear;
-	@keyframes pulse-red {
-		0% {
-			color: $grayColor;
-			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 0);
-		}
-		50% {
-			color: $mainColor;
-			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 1);
-		}
-		100% {
-			color: $grayColor;
-			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 0);
-		}
-	}
 }
 //<GLOBAL Animations>=================================
 

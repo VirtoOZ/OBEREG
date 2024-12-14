@@ -195,6 +195,26 @@ body {
 		justify-content: center;
 		@include adaptiveValue("padding-left", 50, 10);
 		@include adaptiveValue("padding-right", 50, 10);
+		@media (max-width: $mobileBig) {
+			& .top-footer__column {
+				display: flex;
+				.top-footer__button {
+					flex: 0 1 50%;
+				}
+			}
+			& .top-footer__home-left {
+			}
+		}
+		@media (max-width: $mobile) {
+			& .top-footer__column {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				.top-footer__button {
+					flex: 0 1 rem(290);
+				}
+			}
+		}
 	}
 	// .main__title
 	&__title {
@@ -263,7 +283,7 @@ body {
 		}
 	}
 }
-.buttons-main {
+.buttmainons- {
 	// .buttons-main__left
 	&__left {
 		display: flex;

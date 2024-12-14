@@ -82,6 +82,11 @@
 	&__tel {
 		position: relative;
 		z-index: 2;
+		@media (max-width: $tablet) {
+			border-color: $grayColor;
+			color: $grayColor;
+			animation: pulse-gray 3s infinite linear;
+		}
 		&::before {
 			font-size: 0;
 		}
@@ -186,6 +191,10 @@
 		border: rem(1) solid $grayColor;
 		@extend --anim-red;
 	}
+	.menu__tel-white {
+		animation: pulse-red 3s infinite linear;
+		border: rem(1) solid $grayColor;
+	}
 	.top-footer__button {
 		border: rem(1) solid $grayColor;
 		@extend --anim-gray;
@@ -215,6 +224,7 @@
 			position: relative;
 			z-index: 5;
 		}
+		.top-footer__home-right,
 		.top-footer__right {
 			display: flex;
 			flex-wrap: wrap;

@@ -1,7 +1,10 @@
 //<HEADER>=================================
 .header {
-	// width: 100%;
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	// position: relative;
 	z-index: 6;
 	// background-color: #000;
 	// .header__text
@@ -76,6 +79,19 @@
 		@media (min-width: $tablet) {
 			display: flex;
 			justify-content: flex-end;
+		}
+	}
+	// .header__buttons-footer
+	&__buttons-footer {
+		@media (max-width: $tablet) {
+			.top-footer__button {
+				flex: 0 0 50%;
+			}
+		}
+		@media (max-width: $mobile) {
+			.top-footer__button {
+				flex: 1 1 100%;
+			}
 		}
 	}
 }
