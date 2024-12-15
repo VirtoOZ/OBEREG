@@ -4,15 +4,8 @@
 	// bottom: 0;
 	// left: 0;
 	// width: 100%;
-	position: relative;
+	// position: relative;
 	z-index: 5;
-	@media (max-width: $mobileSmall) {
-		.footer__bg {
-		}
-		.footer__bottom {
-			// display: none;
-		}
-	}
 	// .footer__container
 	&__container {
 	}
@@ -55,16 +48,17 @@
 	// .footer__bg
 	&__bg {
 		background-color: $grayColor;
-		position: relative;
+		// position: relative;
 		// transform: translate(0px, 0px);
 		// transition: transform 0.3s ease 0s;
 		&::before {
 			content: "";
+			// position: absolute;
 			display: block;
 			width: 100%;
 			height: rem(2);
-			top: 0;
-			left: 0;
+			// top: 0;
+			// left: 0;
 			background-color: #792423;
 		}
 	}
@@ -72,9 +66,11 @@
 .top-footer {
 	// .top-footer__home-left
 	&__home-left {
+		display: flex;
 	}
 	// .top-footer__home-right
 	&__home-right {
+		display: flex;
 	}
 	// .top-footer__left
 	&__left {

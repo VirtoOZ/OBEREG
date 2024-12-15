@@ -4,9 +4,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	// position: relative;
 	z-index: 6;
-	// background-color: #000;
 	// .header__text
 	&__text {
 		@include adaptiveValue("font-size", 50, 20);
@@ -84,12 +82,9 @@
 	// .header__buttons-home-footer
 	&__buttons-home-footer {
 		@media (max-width: $tablet) {
+			width: 100%;
 			.top-footer__home-right {
-				display: flex;
-				flex-wrap: wrap;
-			}
-			.top-footer__button {
-				flex: 0 0 50%;
+				flex-direction: column;
 			}
 		}
 		@media (max-width: $mobile) {

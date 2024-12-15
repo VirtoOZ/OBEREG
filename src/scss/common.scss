@@ -1,9 +1,8 @@
 // Заголовки, общие БЄМ блоки и проче...
-.button {
+--button {
 	@include adaptiveValue("padding-left", 30, 5);
 	@include adaptiveValue("padding-right", 30, 5);
 	border-radius: rem(25);
-	color: $mainTextColor;
 	text-align: center;
 	border: rem(1) solid transparent;
 	line-height: math.div(20, 20);
@@ -12,6 +11,7 @@
 	transition:
 		color 0.3s ease 0s,
 		border 0.3s ease 0s,
+		border-color 0.3s ease 0s,
 		box-shadow 0.3s ease 0s,
 		text-shadow 0.3s ease 0s;
 	@media (min-width: $tablet) {
@@ -24,49 +24,69 @@
 		@include adaptiveValue("font-size", 20, 16);
 	}
 }
-.button-red {
+.button_red {
+	@extend --button;
 	background-color: $mainColor;
-	border: rem(1) solid $mainColor;
+	border-color: $mainColor;
 	@media (any-hover: hover) {
 		&:hover {
-			border: rem(1) solid #fff;
+			border-color: #fff;
 			color: #fff;
 			// box-shadow: 0 0 rem(7) rgba(255, 255, 255, 1);
 			text-shadow: 0 0 rem(3) #fff;
 		}
 	}
 }
-.button-blur {
+.button_blur {
+	@extend --button;
+	color: $mainTextColor;
 	backdrop-filter: blur(rem(5));
-	border: rem(1) solid $mainTextColor;
+	border-color: $mainTextColor;
 	@media (any-hover: hover) {
 		&:hover {
-			border: rem(1) solid #fff;
+			border-color: #fff;
 			color: #fff;
 			// box-shadow: 0 0 rem(10) #fff;
 			text-shadow: 0 0 rem(3) #fff;
 		}
 	}
 }
-.-anim-red {
-	animation: pulse-red 3s infinite linear;
-	@keyframes pulse-red {
-		0% {
-			color: $grayColor;
-			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 0);
-		}
-		50% {
-			color: $mainColor;
-			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 1);
-		}
-		100% {
-			color: $grayColor;
-			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 0);
+.button_gray {
+	@extend --button;
+	border-color: $grayColor;
+	@media (any-hover: hover) {
+		&:hover {
+			border-color: #fff;
+			color: #fff;
+			// box-shadow: 0 0 rem(10) #fff;
+			text-shadow: 0 0 rem(3) #fff;
 		}
 	}
 }
-.-anim-gray {
+--anim-red {
+	animation: pulse-red 3s infinite linear;
+}
+--anim-gray {
 	animation: pulse-gray 3s infinite linear;
+}
+--anim-white {
+	animation: pulse-white 3s infinite linear;
+}
+.animaions {
+	@keyframes pulse-white {
+		0% {
+			color: $mainTextColor;
+			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
+		}
+		50% {
+			color: #fff;
+			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 1);
+		}
+		100% {
+			color: $mainTextColor;
+			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
+		}
+	}
 	@keyframes pulse-gray {
 		0% {
 			color: $grayColor;
@@ -81,21 +101,18 @@
 			box-shadow: 0 0 rem(7) rgba(56, 62, 66, 0);
 		}
 	}
-}
-.-anim-white {
-	animation: pulse-white 3s infinite linear;
-	@keyframes pulse-white {
+	@keyframes pulse-red {
 		0% {
-			color: $mainTextColor;
-			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
+			color: $grayColor;
+			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 0);
 		}
 		50% {
-			color: #fff;
-			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 1);
+			color: $mainColor;
+			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 1);
 		}
 		100% {
-			color: $mainTextColor;
-			box-shadow: 0 0 rem(7) rgba(255, 255, 255, 0);
+			color: $grayColor;
+			box-shadow: 0 0 rem(7) rgba(47%, 14%, 14%, 0);
 		}
 	}
 }
@@ -135,59 +152,39 @@
 		}
 	}
 }
-.nav-button {
+.button_nav {
 	position: fixed;
-	left: rem(-1);
+	left: rem(-2);
 	top: rem(85);
 	z-index: 4;
-	&__next {
-	}
-	&__prev {
+	&__btn {
 		display: inline-flex;
 		align-items: center;
 		gap: rem(10);
 		border-radius: rem(0) rem(25) rem(25) rem(0);
-		border-color: $grayColor;
-		// @extend --btn-gray;
-		// @extend --anim-white;
+		@extend --text-shadow-white;
+		@extend --anim-gray;
 		padding-right: rem(15);
-	}
-	&__btn {
-		&::before {
-		}
+		border: rem(2) solid #fff;
+		transition: border 0.3s ease 0s;
 	}
 }
 .buttons-footer {
 }
-
 --btn-gray {
 	border-color: $grayColor;
 	color: $grayColor;
+}
+--btn-white {
+	border-color: $mainTextColor;
+	color: $mainTextColor;
 }
 
 --text-shadow-red {
 	text-shadow: 0 0 5px $mainColor;
 }
-
---anim-gray {
-	animation: pulse-gray 3s infinite linear;
-	@keyframes pulse-gray {
-		0% {
-			color: $grayColor;
-			box-shadow: 0 0 rem(7) rgba(56, 62, 66, 0);
-		}
-		50% {
-			color: $mainColor;
-			box-shadow: 0 0 rem(7) rgba(56, 62, 66, 1);
-		}
-		100% {
-			color: $grayColor;
-			box-shadow: 0 0 rem(7) rgba(56, 62, 66, 0);
-		}
-	}
-}
---anim-red {
-	animation: pulse-red 3s infinite linear;
+--text-shadow-white {
+	text-shadow: 0 0 5px #fff;
 }
 //<GLOBAL Animations>=================================
 

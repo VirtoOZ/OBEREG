@@ -9,14 +9,12 @@
 			<section class="page__main main">
 				<div class="main__container">
 					<div class="main__body">
-
 						<div class="main__title">
 							<h1>Резиденции на реке Сестре</h1>
 						</div>
 						<div class="main__text">
 							<p>Комплексная застройка по авторским проектам. Уникальная природа, уединённость, безопасность, близость к городу</p>
 						</div>
-
 					</div>
 				</div>
 			</section>
@@ -24,9 +22,23 @@
 		</main>
 		<div class="main__video">
 			<video autoplay loop muted playsinline preload="auto">
+				<source type="video/webm" src="files/main-video.webm">
 				<source type="video/mp4" src="files/main-video.mp4">
-				<!-- <source type="video/webm" src="files/main-video.webm"> -->
 			</video>
+		</div>
+		<div class="sub-footer">
+			<div class="sub-footer__container">
+				<div class="footer__home-top top-footer">
+					<div data-da=".main__body,767.98,2" class="top-footer__column top-footer__home-left">
+						<a href="" class="top-footer__button button_blur">Помсмотреть генплан и цены</a>
+						<button type="submit" class="top-footer__button button_red">Оставить заявку</button>
+					</div>
+					<div data-da=".header__buttons-home-footer,991.98,2" class="top-footer__column top-footer__home-right">
+						<a href="" class="top-footer__button button_blur">Буклет</a>
+						<a href="" class="top-footer__button button_blur">Видеопрезентация</a>
+					</div>
+				</div>
+			</div>
 		</div>
 		@@include('html/_footer-home.html',{})
 	</div>
