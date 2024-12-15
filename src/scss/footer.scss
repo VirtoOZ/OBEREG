@@ -1,9 +1,10 @@
 //<FOOTER>=================================
 .footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
+	// position: fixed;
+	// bottom: 0;
+	// left: 0;
+	// width: 100%;
+	position: relative;
 	z-index: 5;
 	@media (max-width: $mobileSmall) {
 		.footer__bg {
@@ -14,17 +15,12 @@
 	}
 	// .footer__container
 	&__container {
-		// position: relative;
 	}
 	// .footer__body
 	&__body {
-		@include adaptiveValue("margin-bottom", 30, 10);
-		@media (min-width: $mobile) {
-			margin-top: 0;
-		}
-		@media (min-width: $mobileBig) {
-			@include adaptiveValue("margin-top", 30, 10);
-		}
+	}
+	// .footer__top
+	&__top {
 	}
 	// .footer__home-top
 	&__home-top {
@@ -32,8 +28,7 @@
 		align-items: center;
 		@media (min-width: $tablet) {
 			justify-content: space-between;
-			@include adaptiveValue("column-gap", 30, 10);
-			@include adaptiveValue("row-gap", 30, 10);
+			@include adaptiveValue("gap", 30, 10);
 		}
 		@media (max-width: $tablet) {
 			.top-footer__column {
@@ -43,6 +38,10 @@
 					// flex: 1 1 50%;
 				}
 			}
+		}
+		@media (min-width: $mobileBig) {
+			@include adaptiveValue("margin-top", 30, 10);
+			@include adaptiveValue("margin-bottom", 30, 10);
 		}
 	}
 	// .footer__bottom
@@ -55,16 +54,16 @@
 	}
 	// .footer__bg
 	&__bg {
-		position: relative;
 		background-color: $grayColor;
-		transform: translate(0px, 0px);
-		transition: transform 0.3s ease 0s;
+		position: relative;
+		// transform: translate(0px, 0px);
+		// transition: transform 0.3s ease 0s;
 		&::before {
 			content: "";
-			position: absolute;
+			display: block;
 			width: 100%;
 			height: rem(2);
-			top: rem(-2);
+			top: 0;
 			left: 0;
 			background-color: #792423;
 		}

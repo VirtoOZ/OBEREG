@@ -101,7 +101,7 @@
 }
 .content {
 	@media (min-width: $tablet) {
-		margin-bottom: rem(20);
+		// margin-bottom: rem(20);
 	}
 	@include adaptiveValue("padding-top", 120, 90);
 	@include adaptiveValue("padding-bottom", 140, 70);

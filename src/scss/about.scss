@@ -50,14 +50,7 @@
 	display: flex;
 	align-items: end;
 	position: relative;
-	@media (min-width: $tablet) {
-	}
 	min-height: 100vh;
-	@media (max-width: $tablet) {
-		@include adaptiveValue("padding-top", 140, 40);
-	}
-}
-.content {
 }
 .menu-about {
 	// .menu-about__body
