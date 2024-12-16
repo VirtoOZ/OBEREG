@@ -179,13 +179,17 @@ body {
   text-shadow: 0 0 .0625rem #000;
   transition: color .3s ease 0s,text-shadow .3s ease 0s
 }
-.menu__home-tel {
+.menu__home-tel,
+.menu__tel {
   position: relative;
-  z-index: 2;
-  color: #dcdedf
+  z-index: 2
 }
-.menu__home-tel::before {
+.menu__home-tel::before,
+.menu__tel::before {
   font-size: 0
+}
+.menu__home-tel {
+  color: #dcdedf
 }
 .icon-menu {
   display: none
@@ -215,7 +219,8 @@ body {
 --button,
 .button_blur,
 .button_gray,
-.button_red {
+.button_red,
+.button_tel {
   border-radius: 1.5625rem;
   text-align: center;
   border: .0625rem solid transparent;
@@ -236,8 +241,7 @@ body {
   border-color: #383e42
 }
 --anim-red,
-.menu-open .menu__home-tel.button_blur,
-.menu__tel.button_blur {
+.menu-open .menu__home-tel.button_blur {
   -webkit-animation: pulse-red 3s infinite linear;
   animation: pulse-red 3s infinite linear
 }
@@ -248,10 +252,10 @@ body {
   animation: pulse-gray 3s infinite linear
 }
 --anim-white,
+.button_tel,
 .main__body .button_blur,
 .main__body .button_red,
 .menu-open .button_red,
-.menu__home-tel.button_blur,
 .sub-footer .button_blur,
 .sub-footer .button_red {
   -webkit-animation: pulse-white 3s infinite linear;
@@ -291,7 +295,7 @@ body {
     box-shadow: 0 0 .4375rem rgba(56,62,66,0)
   }
   50% {
-    color: #792423;
+    color: #000;
     box-shadow: 0 0 .4375rem #383e42
   }
   100% {
@@ -305,7 +309,7 @@ body {
     box-shadow: 0 0 .4375rem rgba(56,62,66,0)
   }
   50% {
-    color: #792423;
+    color: #000;
     box-shadow: 0 0 .4375rem #383e42
   }
   100% {
@@ -356,6 +360,12 @@ body {
 .content__text:not(:last-child) {
   margin-bottom: .625rem
 }
+.button_tel {
+  margin: .4375rem 0;
+  backdrop-filter: blur(.625rem);
+  border: .125rem solid #fff;
+  text-shadow: 0 0 .1875rem #792423
+}
 .button_nav {
   position: fixed;
   left: -.125rem;
@@ -375,17 +385,20 @@ body {
   border-color: #383e42;
   color: #383e42
 }
---btn-white {
+--btn-textColor {
   border-color: #dcdedf;
   color: #dcdedf
 }
+--btn-white {
+  border-color: #fff;
+  color: #fff
+}
 --text-shadow-red {
-  text-shadow: 0 0 5px #792423
+  text-shadow: 0 0 .1875rem #792423
 }
 --text-shadow-white,
-.button_nav__btn,
-.menu__tel.button_blur {
-  text-shadow: 0 0 5px #fff
+.button_nav__btn {
+  text-shadow: 0 0 .1875rem #fff
 }
 .header {
   position: fixed;
@@ -694,6 +707,9 @@ body {
   flex-direction: column;
   justify-content: center
 }
+.main__body .button_blur {
+  border: .0625rem solid #fff
+}
 .main__title {
   text-align: center;
   line-height: 1.2;
@@ -735,6 +751,9 @@ body {
 .sub-footer {
   position: relative;
   z-index: 3
+}
+.sub-footer .button_blur {
+  border: .0625rem solid #fff
 }
 @media (min-width:47.99875em)and (min-width:160em) {
   .footer__home-top {
@@ -799,14 +818,16 @@ body {
   --button,
   .button_blur,
   .button_gray,
-  .button_red {
-    padding-top: .625rem
+  .button_red,
+  .button_tel {
+    padding-top: 1.125rem
   }
   --button,
   .button_blur,
   .button_gray,
-  .button_red {
-    padding-bottom: .625rem
+  .button_red,
+  .button_tel {
+    padding-bottom: 1.125rem
   }
   .footer__home-top {
     gap: 1.875rem
@@ -829,19 +850,22 @@ body {
   --button,
   .button_blur,
   .button_gray,
-  .button_red {
+  .button_red,
+  .button_tel {
     padding-left: 1.875rem
   }
   --button,
   .button_blur,
   .button_gray,
-  .button_red {
+  .button_red,
+  .button_tel {
     padding-right: 1.875rem
   }
   --button,
   .button_blur,
   .button_gray,
-  .button_red {
+  .button_red,
+  .button_tel {
     font-size: 1.25rem
   }
   .content {
@@ -962,6 +986,12 @@ body {
   .main__body {
     padding-top: 8.75rem
   }
+  .main__body {
+    padding-left: 3.125rem
+  }
+  .main__body {
+    padding-right: 3.125rem
+  }
   .main__title {
     font-size: 6.25rem
   }
@@ -993,19 +1023,22 @@ body {
   --button,
   .button_blur,
   .button_gray,
-  .button_red {
-    padding-left: .3125rem
+  .button_red,
+  .button_tel {
+    padding-left: .625rem
   }
   --button,
   .button_blur,
   .button_gray,
-  .button_red {
-    padding-right: .3125rem
+  .button_red,
+  .button_tel {
+    padding-right: .625rem
   }
   --button,
   .button_blur,
   .button_gray,
-  .button_red {
+  .button_red,
+  .button_tel {
     font-size: .8125rem
   }
   .content {
@@ -1126,6 +1159,12 @@ body {
   .main__body {
     padding-top: 3rem
   }
+  .main__body {
+    padding-left: .625rem
+  }
+  .main__body {
+    padding-right: .625rem
+  }
   .main__title {
     font-size: 2rem
   }
@@ -1171,7 +1210,7 @@ body {
     transition: top .5s ease-out 0s
   }
   .menu__link {
-    font-size: 1.875rem;
+    font-size: 2.1875rem;
     display: block;
     color: #383e42
   }
@@ -1247,9 +1286,16 @@ body {
   --button,
   .button_blur,
   .button_gray,
-  .button_red {
+  .button_red,
+  .button_tel {
     padding-top: .9375rem;
     padding-bottom: .9375rem
+  }
+  .button_tel {
+    color: #383e42;
+    -webkit-animation: pulse-red 3s infinite linear;
+    animation: pulse-red 3s infinite linear;
+    text-shadow: 0 0 .1875rem #fff
   }
   .header__buttons-home-footer {
     width: 100%
@@ -1277,7 +1323,8 @@ body {
   --button,
   .button_blur,
   .button_gray,
-  .button_red {
+  .button_red,
+  .button_tel {
     font-size: 1rem
   }
 }
@@ -1324,14 +1371,14 @@ body {
   }
 }
 @media (max-width:29.99875em) {
-  .menu__home-tel.button_blur {
+  .button_tel.button_tel {
     font-size: 0;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    padding-left: .9375rem;
-    padding-right: .9375rem
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem
   }
-  .menu__home-tel.button_blur::before {
+  .button_tel.button_tel::before {
     font-size: 1.25rem;
     transition: -webkit-transform .3s ease 0s;
     transition: transform .3s ease 0s;
@@ -1339,7 +1386,7 @@ body {
   }
 }
 @media (max-width:29.99875em)and (any-hover:hover) {
-  .menu__home-tel.button_blur:hover::before {
+  .button_tel.button_tel:hover::before {
     -webkit-transform: scale(1.2);
     transform: scale(1.2)
   }
@@ -1357,7 +1404,8 @@ body {
   --button,
   .button_blur,
   .button_gray,
-  .button_red {
+  .button_red,
+  .button_tel {
     font-size: 1.25rem
   }
 }
@@ -1396,7 +1444,8 @@ body {
     --button,
     .button_blur,
     .button_gray,
-    .button_red {
+    .button_red,
+    .button_tel {
       font-size: clamp(1rem ,.9642857143rem + .1785714286vw ,1.25rem)
     }
   }
@@ -1404,7 +1453,8 @@ body {
     --button,
     .button_blur,
     .button_gray,
-    .button_red {
+    .button_red,
+    .button_tel {
       font-size: calc(1rem + .25*(100vw - 20rem)/ 140)
     }
   }
@@ -1436,43 +1486,48 @@ body {
       font-size: calc(.8125rem + .4375*(100vw - 20rem)/ 140)
     }
   }
-  @supports (padding-left:clamp(0.3125rem ,0.0892857143rem + 1.1160714286vw ,1.875rem)) {
+  @supports (padding-left:clamp(0.625rem ,0.4464285714rem + 0.8928571429vw ,1.875rem)) {
     --button,
     .button_blur,
     .button_gray,
-    .button_red {
-      padding-left: clamp(.3125rem ,.0892857143rem + 1.1160714286vw ,1.875rem)
+    .button_red,
+    .button_tel {
+      padding-left: clamp(.625rem ,.4464285714rem + .8928571429vw ,1.875rem)
     }
   }
-  @supports not (padding-left:clamp(0.3125rem ,0.0892857143rem + 1.1160714286vw ,1.875rem)) {
+  @supports not (padding-left:clamp(0.625rem ,0.4464285714rem + 0.8928571429vw ,1.875rem)) {
     --button,
     .button_blur,
     .button_gray,
-    .button_red {
-      padding-left: calc(.3125rem + 1.5625*(100vw - 20rem)/ 140)
+    .button_red,
+    .button_tel {
+      padding-left: calc(.625rem + 1.25*(100vw - 20rem)/ 140)
     }
   }
-  @supports (padding-right:clamp(0.3125rem ,0.0892857143rem + 1.1160714286vw ,1.875rem)) {
+  @supports (padding-right:clamp(0.625rem ,0.4464285714rem + 0.8928571429vw ,1.875rem)) {
     --button,
     .button_blur,
     .button_gray,
-    .button_red {
-      padding-right: clamp(.3125rem ,.0892857143rem + 1.1160714286vw ,1.875rem)
+    .button_red,
+    .button_tel {
+      padding-right: clamp(.625rem ,.4464285714rem + .8928571429vw ,1.875rem)
     }
   }
-  @supports not (padding-right:clamp(0.3125rem ,0.0892857143rem + 1.1160714286vw ,1.875rem)) {
+  @supports not (padding-right:clamp(0.625rem ,0.4464285714rem + 0.8928571429vw ,1.875rem)) {
     --button,
     .button_blur,
     .button_gray,
-    .button_red {
-      padding-right: calc(.3125rem + 1.5625*(100vw - 20rem)/ 140)
+    .button_red,
+    .button_tel {
+      padding-right: calc(.625rem + 1.25*(100vw - 20rem)/ 140)
     }
   }
   @supports (font-size:clamp(0.8125rem ,0.75rem + 0.3125vw ,1.25rem)) {
     --button,
     .button_blur,
     .button_gray,
-    .button_red {
+    .button_red,
+    .button_tel {
       font-size: clamp(.8125rem ,.75rem + .3125vw ,1.25rem)
     }
   }
@@ -1480,7 +1535,8 @@ body {
     --button,
     .button_blur,
     .button_gray,
-    .button_red {
+    .button_red,
+    .button_tel {
       font-size: calc(.8125rem + .4375*(100vw - 20rem)/ 140)
     }
   }
@@ -1872,6 +1928,26 @@ body {
       padding-top: calc(3rem + 5.75*(100vw - 20rem)/ 140)
     }
   }
+  @supports (padding-left:clamp(0.625rem ,0.2678571429rem + 1.7857142857vw ,3.125rem)) {
+    .main__body {
+      padding-left: clamp(.625rem ,.2678571429rem + 1.7857142857vw ,3.125rem)
+    }
+  }
+  @supports not (padding-left:clamp(0.625rem ,0.2678571429rem + 1.7857142857vw ,3.125rem)) {
+    .main__body {
+      padding-left: calc(.625rem + 2.5*(100vw - 20rem)/ 140)
+    }
+  }
+  @supports (padding-right:clamp(0.625rem ,0.2678571429rem + 1.7857142857vw ,3.125rem)) {
+    .main__body {
+      padding-right: clamp(.625rem ,.2678571429rem + 1.7857142857vw ,3.125rem)
+    }
+  }
+  @supports not (padding-right:clamp(0.625rem ,0.2678571429rem + 1.7857142857vw ,3.125rem)) {
+    .main__body {
+      padding-right: calc(.625rem + 2.5*(100vw - 20rem)/ 140)
+    }
+  }
   @supports (font-size:clamp(2rem ,1.3928571429rem + 3.0357142857vw ,6.25rem)) {
     .main__title {
       font-size: clamp(2rem ,1.3928571429rem + 3.0357142857vw ,6.25rem)
@@ -1934,36 +2010,40 @@ body {
   }
 }
 @media (min-width:61.99875em)and (min-width:20em)and (max-width:160em) {
-  @supports (padding-top:clamp(0.3125rem ,0.2678571429rem + 0.2232142857vw ,0.625rem)) {
+  @supports (padding-top:clamp(0.4375rem ,0.3392857143rem + 0.4910714286vw ,1.125rem)) {
     --button,
     .button_blur,
     .button_gray,
-    .button_red {
-      padding-top: clamp(.3125rem ,.2678571429rem + .2232142857vw ,.625rem)
+    .button_red,
+    .button_tel {
+      padding-top: clamp(.4375rem ,.3392857143rem + .4910714286vw ,1.125rem)
     }
   }
-  @supports not (padding-top:clamp(0.3125rem ,0.2678571429rem + 0.2232142857vw ,0.625rem)) {
+  @supports not (padding-top:clamp(0.4375rem ,0.3392857143rem + 0.4910714286vw ,1.125rem)) {
     --button,
     .button_blur,
     .button_gray,
-    .button_red {
-      padding-top: calc(.3125rem + .3125*(100vw - 20rem)/ 140)
+    .button_red,
+    .button_tel {
+      padding-top: calc(.4375rem + .6875*(100vw - 20rem)/ 140)
     }
   }
-  @supports (padding-bottom:clamp(0.3125rem ,0.2678571429rem + 0.2232142857vw ,0.625rem)) {
+  @supports (padding-bottom:clamp(0.4375rem ,0.3392857143rem + 0.4910714286vw ,1.125rem)) {
     --button,
     .button_blur,
     .button_gray,
-    .button_red {
-      padding-bottom: clamp(.3125rem ,.2678571429rem + .2232142857vw ,.625rem)
+    .button_red,
+    .button_tel {
+      padding-bottom: clamp(.4375rem ,.3392857143rem + .4910714286vw ,1.125rem)
     }
   }
-  @supports not (padding-bottom:clamp(0.3125rem ,0.2678571429rem + 0.2232142857vw ,0.625rem)) {
+  @supports not (padding-bottom:clamp(0.4375rem ,0.3392857143rem + 0.4910714286vw ,1.125rem)) {
     --button,
     .button_blur,
     .button_gray,
-    .button_red {
-      padding-bottom: calc(.3125rem + .3125*(100vw - 20rem)/ 140)
+    .button_red,
+    .button_tel {
+      padding-bottom: calc(.4375rem + .6875*(100vw - 20rem)/ 140)
     }
   }
   @supports (gap:clamp(0.625rem ,0.4464285714rem + 0.8928571429vw ,1.875rem)) {
@@ -1981,14 +2061,16 @@ body {
   --button,
   .button_blur,
   .button_gray,
-  .button_red {
-    padding-top: .3125rem
+  .button_red,
+  .button_tel {
+    padding-top: .4375rem
   }
   --button,
   .button_blur,
   .button_gray,
-  .button_red {
-    padding-bottom: .3125rem
+  .button_red,
+  .button_tel {
+    padding-bottom: .4375rem
   }
   .footer__home-top {
     gap: .625rem
@@ -2046,6 +2128,11 @@ body {
     text-shadow: 0 0 .1875rem #fff
   }
   .button_gray:hover {
+    border-color: #fff;
+    color: #fff;
+    text-shadow: 0 0 .1875rem #fff
+  }
+  .button_tel:hover {
     border-color: #fff;
     color: #fff;
     text-shadow: 0 0 .1875rem #fff

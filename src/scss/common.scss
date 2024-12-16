@@ -1,7 +1,7 @@
 // Заголовки, общие БЄМ блоки и проче...
 --button {
-	@include adaptiveValue("padding-left", 30, 5);
-	@include adaptiveValue("padding-right", 30, 5);
+	@include adaptiveValue("padding-left", 30, 10);
+	@include adaptiveValue("padding-right", 30, 10);
 	border-radius: rem(25);
 	text-align: center;
 	border: rem(1) solid transparent;
@@ -15,8 +15,8 @@
 		box-shadow 0.3s ease 0s,
 		text-shadow 0.3s ease 0s;
 	@media (min-width: $tablet) {
-		@include adaptiveValue("padding-top", 10, 5);
-		@include adaptiveValue("padding-bottom", 10, 5);
+		@include adaptiveValue("padding-top", 18, 7);
+		@include adaptiveValue("padding-bottom", 18, 7);
 	}
 	@media (max-width: $tablet) {
 		padding-top: rem(15);
@@ -42,6 +42,7 @@
 	color: $mainTextColor;
 	backdrop-filter: blur(rem(5));
 	border-color: $mainTextColor;
+
 	@media (any-hover: hover) {
 		&:hover {
 			border-color: #fff;
@@ -72,7 +73,7 @@
 --anim-white {
 	animation: pulse-white 3s infinite linear;
 }
-.animaions {
+.animations {
 	@keyframes pulse-white {
 		0% {
 			color: $mainTextColor;
@@ -93,7 +94,7 @@
 			box-shadow: 0 0 rem(7) rgba(56, 62, 66, 0);
 		}
 		50% {
-			color: $mainColor;
+			color: #000;
 			box-shadow: 0 0 rem(7) rgba(56, 62, 66, 1);
 		}
 		100% {
@@ -152,6 +153,51 @@
 		}
 	}
 }
+.button_tel {
+	margin: rem(7) rem(0);
+	backdrop-filter: blur(rem(10));
+	border: rem(2) solid #fff;
+	@extend --anim-white;
+	@extend --button;
+	// @extend --btn-textColor;
+	text-shadow: 0 0 rem(3) $mainColor;
+	// @extend --text-shadow-white;
+
+	@media (max-width: $tablet) {
+		color: $grayColor;
+		// border-color: #fff;
+		animation: pulse-red 3s infinite linear;
+		text-shadow: 0 0 rem(3) #fff;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			border-color: #fff;
+			color: #fff;
+			// box-shadow: 0 0 rem(7) #fff;
+			text-shadow: 0 0 rem(3) #fff;
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		&.button_tel {
+			font-size: 0;
+			padding-top: rem(12);
+			padding-bottom: rem(12);
+			padding-left: rem(20);
+			padding-right: rem(20);
+			&::before {
+				font-size: rem(20);
+				transition: transform 0.3s ease 0s;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					&::before {
+						transform: scale(1.2);
+					}
+				}
+			}
+		}
+	}
+}
 .button_nav {
 	position: fixed;
 	left: rem(-2);
@@ -175,16 +221,20 @@
 	border-color: $grayColor;
 	color: $grayColor;
 }
---btn-white {
+--btn-textColor {
 	border-color: $mainTextColor;
 	color: $mainTextColor;
 }
+--btn-white {
+	border-color: #fff;
+	color: #fff;
+}
 
 --text-shadow-red {
-	text-shadow: 0 0 5px $mainColor;
+	text-shadow: 0 0 rem(3) $mainColor;
 }
 --text-shadow-white {
-	text-shadow: 0 0 5px #fff;
+	text-shadow: 0 0 rem(3) #fff;
 }
 //<GLOBAL Animations>=================================
 

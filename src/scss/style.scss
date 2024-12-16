@@ -193,8 +193,8 @@ body {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		// @include adaptiveValue("padding-left", 50, 10);
-		// @include adaptiveValue("padding-right", 50, 10);
+		@include adaptiveValue("padding-left", 50, 10);
+		@include adaptiveValue("padding-right", 50, 10);
 		@media (max-width: $mobileBig) {
 			& .top-footer__column {
 				display: flex;
@@ -216,6 +216,7 @@ body {
 			}
 		}
 		.button_blur {
+			border: rem(1) solid #fff;
 			@extend --anim-white;
 		}
 		.button_red {
@@ -295,6 +296,7 @@ body {
 	position: relative;
 	z-index: 3;
 	.button_blur {
+		border: rem(1) solid #fff;
 		@extend --anim-white;
 	}
 	.button_red {
