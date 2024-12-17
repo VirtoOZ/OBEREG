@@ -35,36 +35,49 @@
 		height: 100%;
 		top: 0;
 		left: 0;
+		// overflow: auto;
 	}
 	&__bg-image {
-		position: relative;
-		padding-bottom: 60%;
-		border-radius: rem(40) 0 0 rem(40);
-		overflow: hidden;
 		img {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			object-fit: cover;
+			max-width: 100%;
 		}
-		&:first-child {
-			border-radius: 0 0 0 rem(40);
-		}
-		&:last-child {
-			border-radius: rem(40) 0 0 0;
+		@media (min-width: $tablet) {
+			position: relative;
+			min-height: 100%;
+			border-radius: rem(50) 0 0 rem(50);
+			overflow: hidden;
+			img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				object-fit: cover;
+			}
+			&:first-child {
+				border-radius: 0 0 0 rem(50);
+			}
+			&:last-child {
+				border-radius: rem(50) 0 0 0;
+			}
 		}
 	}
 }
 // .about-content
 .builder-content {
-	flex: 1 1 55%;
+	@media (min-width: $tablet) {
+		flex: 1 1 55%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 // .about-media
 .builder-media {
-	flex: 1 1 45%;
-	display: flex;
-	align-items: flex-end;
 	position: relative;
+	@media (min-width: $tablet) {
+		flex: 1 1 45%;
+		display: flex;
+		align-items: flex-end;
+	}
 }

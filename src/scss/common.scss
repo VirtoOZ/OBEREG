@@ -127,12 +127,14 @@
 	@include adaptiveValue("padding-right", 120, 20);
 	// .content__titles
 	&__title {
+		hyphens: auto;
 		margin-top: rem(50);
 		@include adaptiveValue("font-size", 68, 40);
 		line-height: math.div(74.8, 68);
 		color: $grayColor;
 		&:not(:last-child) {
-			margin-bottom: rem(10);
+			// margin-bottom: rem(10);
+			@include adaptiveValue("margin-bottom", 40, 25);
 		}
 	}
 	// .content__column
@@ -155,6 +157,34 @@
 			&:not(:last-child) {
 				@include adaptiveValue("margin-bottom", 20, 16);
 			}
+		}
+	}
+	// .content__list
+	&__list {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 25);
+		}
+	}
+	// .content__item
+	&__item {
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: math.div(30, 20);
+		position: relative;
+		color: $grayColor;
+		padding-left: rem(15);
+		&::before {
+			content: "";
+			position: absolute;
+			@include adaptiveValue("top", 9, 7);
+			left: 0;
+			width: rem(9);
+			height: rem(9);
+			display: block;
+			background-color: $mainColor;
+			border-radius: 50%;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(10);
 		}
 	}
 }

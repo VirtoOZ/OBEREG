@@ -1,0 +1,106 @@
+.contacts {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: auto;
+	// .contacts__btn
+	&__btn {
+	}
+	// .contacts__container
+	&__container {
+	}
+	// .contacts__body
+	&__body {
+		@media (min-width: $tablet) {
+			display: flex;
+		}
+		position: absolut;
+		width: 100%;
+		min-height: 100%;
+		top: 0;
+		left: 0;
+	}
+	// .contacts__content
+	&__content {
+		flex: 0 0 55%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		// @include adaptiveValue("padding-top", 120, 90);
+		// @include adaptiveValue("padding-bottom", 140, 40);
+		// @include adaptiveValue("padding-left", 45, 20);
+		// @include adaptiveValue("padding-right", 120, 20);
+	}
+	// .contacts__media
+	&__media {
+		@media (min-width: $tablet) {
+			flex: 0 0 45%;
+			display: flex;
+			align-items: flex-end;
+			position: relative;
+		}
+		// @include adaptiveValue("padding-top", 120, 90);
+		// @include adaptiveValue("padding-bottom", 140, 40);
+		// @include adaptiveValue("padding-left", 45, 20);
+		// @include adaptiveValue("padding-right", 120, 20);
+		@media (max-width: $tablet) {
+			// @include adaptiveValue("padding-top", 140, 40);
+		}
+	}
+	// .contacts__bg-image
+	&__bg-image {
+		iframe {
+			width: 100%;
+			aspect-ratio: 16/9;
+		}
+		@media (min-width: $tablet) {
+			iframe {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				object-fit: cover;
+			}
+		}
+	}
+	// .contacts__link
+	&__link {
+	}
+}
+.link-contacts {
+	font-size: rem(16);
+	line-height: math.div(23.3, 16);
+	color: $grayColor;
+	a {
+		color: $mainColor;
+		@media (any-hover: hover) {
+			&:hover {
+				text-shadow: 0 0 rem(3) $mainColor;
+			}
+		}
+	}
+	& :not(:last-child) {
+		@include adaptiveValue("margin-bottom", 16, 10);
+	}
+	// .link-contacts__tele
+	&__telephone {
+	}
+	// .link-contacts__email
+	&__email {
+	}
+	// .link-contacts__whatsapp
+	&__whatsapp {
+	}
+	// .link-contacts__telegramm
+	&__telegramm {
+	}
+	// .link-contacts__adress
+	&__adress {
+	}
+	// .link-contacts__builder
+	&__builder {
+	}
+}
