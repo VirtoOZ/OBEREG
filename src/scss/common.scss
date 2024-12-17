@@ -151,6 +151,11 @@
 		&:not(:last-child) {
 			margin-bottom: rem(10);
 		}
+		p {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 20, 16);
+			}
+		}
 	}
 }
 .button_tel {

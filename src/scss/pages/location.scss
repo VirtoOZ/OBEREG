@@ -5,7 +5,6 @@
 	top: 0;
 	left: 0;
 	overflow: auto;
-
 	// .location__btn
 	&__btn {
 	}
@@ -94,6 +93,7 @@
 	// .content__item
 	&__item {
 		@include adaptiveValue("font-size", 20, 16);
+		line-height: math.div(30, 20);
 		position: relative;
 		color: $grayColor;
 		padding-left: rem(15);

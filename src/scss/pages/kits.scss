@@ -1,4 +1,4 @@
-.catalog {
+.kits {
 	// .catalog__container
 	&__container {
 	}
@@ -44,8 +44,7 @@
 		}
 	}
 }
-.item-catalog {
-	// text-align: center;
+.item-kits {
 	// .item-catalog__link
 	&__link {
 		display: flex;
@@ -54,9 +53,9 @@
 	}
 	// .item-catalog__status
 	&__status {
+		color: $grayColor;
 		font-size: 18px;
 		line-height: math.div(27, 18);
-		color: $grayColor;
 		&:not(:last-child) {
 			margin-bottom: rem(5);
 		}
@@ -103,7 +102,7 @@
 		}
 	}
 }
-.info-catalog {
+.info-kits {
 	// .info-catalog__item-title
 	&__item-title {
 		font-size: rem(18);
