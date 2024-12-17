@@ -44,7 +44,7 @@
 		}
 		@media (min-width: $tablet) {
 			position: relative;
-			min-height: 100%;
+			padding-bottom: 56%;
 			border-radius: rem(50) 0 0 rem(50);
 			overflow: hidden;
 			img,
@@ -77,6 +77,8 @@
 // .about-media
 .infrastructure-media {
 	position: relative;
+	// height: 100%;
+
 	@media (min-width: $tablet) {
 		flex: 1 1 45%;
 		display: flex;

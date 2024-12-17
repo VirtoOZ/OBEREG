@@ -24,8 +24,28 @@
 		@include adaptiveValue("font-size", 20, 16);
 	}
 }
-.button_red {
+.button_nav {
+	position: fixed;
+	left: rem(-2);
+	top: rem(85);
+	z-index: 4;
+	&__btn {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(10);
+		border-radius: rem(0) rem(25) rem(25) rem(0);
+		@extend --text-shadow-white;
+		@extend --anim-gray;
+		padding-right: rem(15);
+		border: rem(2) solid #fff;
+		transition: border 0.3s ease 0s;
+	}
+}
+.button_pdf {
 	@extend --button;
+	@extend --btn-gray;
+}
+.button_red {
 	background-color: $mainColor;
 	border-color: $mainColor;
 	@media (any-hover: hover) {
@@ -123,7 +143,7 @@
 	}
 	@include adaptiveValue("padding-top", 120, 90);
 	@include adaptiveValue("padding-bottom", 140, 70);
-	@include adaptiveValue("padding-left", 45, 20);
+	@include adaptiveValue("padding-left", 120, 20);
 	@include adaptiveValue("padding-right", 120, 20);
 	// .content__titles
 	&__title {
@@ -233,23 +253,7 @@
 		}
 	}
 }
-.button_nav {
-	position: fixed;
-	left: rem(-2);
-	top: rem(85);
-	z-index: 4;
-	&__btn {
-		display: inline-flex;
-		align-items: center;
-		gap: rem(10);
-		border-radius: rem(0) rem(25) rem(25) rem(0);
-		@extend --text-shadow-white;
-		@extend --anim-gray;
-		padding-right: rem(15);
-		border: rem(2) solid #fff;
-		transition: border 0.3s ease 0s;
-	}
-}
+
 .buttons-footer {
 }
 --btn-gray {
