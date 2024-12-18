@@ -27,6 +27,14 @@
 			grid-template-columns: repeat(2, 1fr);
 			column-gap: rem(30);
 		}
+		.content__title {
+			font-size: rem(45);
+			display: inline-flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: flex-start;
+			gap: rem(20);
+		}
 		// li {
 		// 	&::before {
 		// 		display: none;
