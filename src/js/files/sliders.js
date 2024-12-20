@@ -8,7 +8,7 @@
 //При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 //Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -20,7 +20,7 @@ EffectFade, Lazy, Manipulation
 //Базовые стили
 import "../../scss/base/swiper.scss";
 //Полный набор стилей с scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+import "../../scss/libs/swiper.scss";
 //Полный набор стилей с node_modules
 // import 'swiper/css';
 
@@ -28,12 +28,13 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	//Список слайдеров
 	//Проверяем, есть ли слайдер на странице
-	if (document.querySelector('.home-plan__slider')) { //Указываем класс нужного слайдера
+	if (document.querySelector('.swiper')) { //Указываем класс нужного слайдера
 		//Создаем слайдер
-		new Swiper('.swiper', { //Указываем класс нужного слайдера
+		new Swiper('.home-plan__slider', { //Указываем класс нужного слайдера
 			//Подключаем модули слайдера
 			//для конкретного случая
-			modules: [Navigation],
+			// modules: [Navigation],
+			modules: [Pagination],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -57,10 +58,12 @@ function initSliders() {
 			*/
 
 			// Пагинация
-
 			pagination: {
 				el: '.home-plan__pagination',
 				clickable: true,
+				renderBullet: function (index, className) {
+					return '<span class="' + className + '">' + (index + 1) + "</span>";
+				},
 			},
 
 
@@ -73,10 +76,10 @@ function initSliders() {
 			*/
 
 			// Кнопки "влево/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
+			// navigation: {
+			// 	prevEl: '.swiper-button-prev',
+			// 	nextEl: '.swiper-button-next',
+			// },
 			/*
 			// Брейкпоинты
 			breakpoints: {
