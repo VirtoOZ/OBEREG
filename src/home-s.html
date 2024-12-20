@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.html',{"title":"OBEREG"})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.html',{})
+		<main class="page">
+			<section class="page__home-s home-s">
+				<div data-tabs class="home-s__body tabs">
+					<div class="home-s__content home-s-content content">
+						<div class="home-s__btn button_nav">
+							<a href="kits.html" class="button_nav__btn button_blur _icon-arrow-left">Коммуникации</a>
+							<!-- <a href="index.html" class="nav-button__btn nav-button__next button button-blur _icon-arrow-left">Главная</a> -->
+						</div>
+						<div class="content__title">
+							<h1>Проект дома S</h1>
+						</div>
+						<div class="home-s__columns">
+							<div class="home-s__column home-plan">
+								<!-- Оболочка слайдера -->
+								<div class="home-plan__slider swiper">
+									<!-- Движущаяся часть слайдера -->
+									<div class="home-plan__wrapper swiper-wrapper">
+										<!-- Слайд -->
+										<!-- <div class="home-plan__slide swiper-slide">
+											<img src="img/projects/S/s1_pervyj-jetazh-1-scaled.jpg" alt="План первого этажа">
+										</div>
+										<div class="home-plan__slide swiper-slide">
+											<img src="img/projects/S/s1_vtoroj-jetazh-1-scaled.jpg" alt="План второго этажа">
+										</div>
+										<div class="home-plan__slide swiper-slide">
+											<img src="img/projects/S/s2_pervyj-jetazh-scaled.jpg" alt="План второго этажа">
+										</div>
+										<div class="home-plan__slide swiper-slide">
+											<img src="img/projects/S/s2_vtoroj-jetazh-scaled.jpg" alt="План второго этажа">
+										</div> -->
+									</div>
+									<!-- Если нужна пагинация -->
+									<div class="home-plan__pagination">
+										<span class="home-plan__floor">Этаж:</span>
+									</div>
+								</div>
+								<div class="home-plan__descr">*Альтернативная планировка</div>
+								<div class="home-plan__links">
+									<a href="">Скачать спецификацию</a>
+									<a href="">Фасады и разрезы</a>
+								</div>
+							</div>
+							<div class="home-s__column home-info">
+								<div class="home-info__colors home-colors ">
+									<nav data-tabs-titles class="home-colors__navigation tabs__navigation">
+										<span class="home-colors__text">Цветовые решения:</span>
+										<button type="button" class="home-colors__title _tab-active"></button>
+										<button type="button" class="home-colors__title"></button>
+										<button type="button" class="home-colors__title"></button>
+									</nav>
+								</div>
+								.home-info__dec
+							</div>
+						</div>
+					</div>
+					<div data-tabs-body class="home-s__media home-s-media content tabs__content">
+						<div class="home-s__bg-images tabs__body">
+							<div class="home-s__bg-image">
+								<video loop muted playsinline controls preload="auto">
+									<source type="video/webm" src="files/">
+									<source type="video/mp4" src="files/proekt-doma-s-bez-logo_420-1.mov">
+								</video>
+							</div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-aa-cam3-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-ba-cam2-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-ba-cam4-day-1-1024x576-1-450x253-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-ba-cam3-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-aa-cam4-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-ba-cam4-day-1-1024x576-1-450x253-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-cam5-aa-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/gostinaja-kuhnja-10-1-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/gostinaja-kuhnja-5-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/spalnja-1-1024x1024-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/s_1-1024x1024-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/gostinaja-kuhnja-2-1-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/gostinaja-kuhnja-4-1-1024x576-1.jpg" alt="background"></div>
+						</div>
+						<div class="home-s__bg-images tabs__body">
+							<!--<div class="home-s__bg-image">
+								<video loop muted playsinline controls preload="auto">
+									<source type="video/webm" src="files/">
+									<source type="video/mp4" src="files/proekt-doma-s-bez-logo_420-1.mov">
+								</video> 
+							</div>-->
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-aa-cam3-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-ba-cam2-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-ba-cam4-day-1-1024x576-1-450x253-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-ba-cam3-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-aa-cam4-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-ba-cam4-day-1-1024x576-1-450x253-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-cam5-aa-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/gostinaja-kuhnja-10-1-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/gostinaja-kuhnja-5-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/spalnja-1-1024x1024-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/s_1-1024x1024-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/gostinaja-kuhnja-2-1-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/gostinaja-kuhnja-4-1-1024x576-1.jpg" alt="background"></div>
+						</div>
+						<div class="home-s__bg-images tabs__body">
+							<div class="home-s__bg-image">
+								<!-- <video loop muted playsinline controls preload="auto">
+									<source type="video/webm" src="files/">
+									<source type="video/mp4" src="files/proekt-doma-s-bez-logo_420-1.mov">
+								</video> -->
+							</div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-aa-cam3-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-ba-cam2-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-ba-cam4-day-1-1024x576-1-450x253-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-ba-cam3-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-aa-cam4-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-var-ba-cam4-day-1-1024x576-1-450x253-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/black-white/type-s-cam5-aa-day-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/gostinaja-kuhnja-10-1-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/gostinaja-kuhnja-5-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/spalnja-1-1024x1024-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/s_1-1024x1024-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/gostinaja-kuhnja-2-1-1024x576-1.jpg" alt="background"></div>
+							<div class="home-s__bg-image"><img src="img/projects/S/gostinaja-kuhnja-4-1-1024x576-1.jpg" alt="background"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div class="footer__container">
+			<div class="footer__top top-footer">
+				<div class="top-footer__column top-footer__left">
+					<!-- <a data-da=".header__buttons-footer,991.98,0" href="" href="" class="top-footer__button button button-blur">Помсмотреть генплан и цены</a>
+					<button data-da=".header__buttons-footer,991.98,1" href="" type="submit" class="top-footer__button button button-red">Оставить заявку</button> -->
+				</div>
+				<div class="top-footer__column top-footer__right">
+					<!-- <a data-da=".header__buttons-footer,991.98,2" href="" class="top-footer__button button button-blur">Буклет</a>
+					<a data-da=".header__buttons-footer,991.98,3" href="" href="" class="top-footer__button button button-blur">Видеопрезентация</a> -->
+				</div>
+			</div>
+		</div>
+		@@include('html/_footer.html',{})
+	</div>
+	<!-- @@include('html/_popup.html',{}) -->
+	@@include('html/_js.html',{})
+</body>
+
+</html>
