@@ -15,20 +15,23 @@
 }
 //=======================================
 //из файла css, iconmoon.io
+._icon-bedroom:before {
+	content: "\e903";
+}
+._icon-garage:before {
+	content: "\e907";
+}
+._icon-bathroom:before {
+	content: "\e908";
+}
 ._icon-arrow-left:before {
 	content: "\e900";
 }
 ._icon-mouse:before {
 	content: "\e901";
 }
-._icon-show-full-static .path1:before {
+._icon-show-full-static:before {
 	content: "\e902";
-	color: rgb(220, 222, 223);
-}
-._icon-show-full-static .path2:before {
-	content: "\e903";
-	margin-left: -1em;
-	color: rgb(56, 62, 66);
 }
 ._icon-ps-logo-static:before {
 	content: "\e904";

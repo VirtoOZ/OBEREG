@@ -43,20 +43,23 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
+._icon-bedroom:before {
+  content: ""
+}
+._icon-garage:before {
+  content: ""
+}
+._icon-bathroom:before {
+  content: ""
+}
 ._icon-arrow-left:before {
   content: ""
 }
 ._icon-mouse:before {
   content: ""
 }
-._icon-show-full-static .path1:before {
-  content: "";
-  color: #dcdedf
-}
-._icon-show-full-static .path2:before {
-  content: "";
-  margin-left: -1em;
-  color: #383e42
+._icon-show-full-static:before {
+  content: ""
 }
 ._icon-ps-logo-static:before {
   content: ""
@@ -325,20 +328,33 @@ body {
   margin-bottom: .625rem
 }
 .proj-color {
-  flex: 0 0 2.5rem;
-  height: 2.5rem;
+  flex: 0 0 2.625rem;
+  height: 2.625rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg)
+  transform: rotate(-45deg);
+  position: relative
+}
+.proj-color::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: .0625rem solid #383e42;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility .3s ease 0s,opacity .3s ease 0s
 }
 .proj-color span {
   position: relative;
-  flex: 0 0 2.25rem;
-  height: 2.25rem;
-  border: .0625rem solid #383e42;
+  flex: 0 0 2.125rem;
+  height: 2.125rem;
   border-radius: 50%;
   overflow: hidden
 }
@@ -1266,7 +1282,8 @@ body {
   opacity: 1;
   color: #383e42;
   text-align: center;
-  line-height: 2.5rem
+  line-height: 2.5rem;
+  transition: background-color .3s ease 0s,color .3s ease 0s,opacity .3s ease 0s
 }
 .home-plan__pagination .swiper-pagination-bullet-active {
   background-color: #383e42;
@@ -1288,8 +1305,9 @@ body {
 .home-colors__navigation {
   align-items: center
 }
-.home-colors__title._tab-active {
-  border: .0625rem solid #383e42
+.home-colors__title._tab-active::after {
+  opacity: 1;
+  visibility: visible
 }
 .descriptions__item {
   align-self: center
@@ -2747,6 +2765,9 @@ button.swiper-pagination-bullet {
   .home-colors__text {
     font-size: 1.25rem
   }
+  .item-room__icon {
+    font-size: 5rem
+  }
   .item-room__name {
     font-size: 1.125rem
   }
@@ -3006,6 +3027,9 @@ button.swiper-pagination-bullet {
   }
   .home-colors__text {
     font-size: 1rem
+  }
+  .item-room__icon {
+    font-size: 3.125rem
   }
   .item-room__name {
     font-size: 1rem
@@ -3918,6 +3942,16 @@ button.swiper-pagination-bullet {
   @supports not (font-size:clamp(1rem ,0.9642857143rem + 0.1785714286vw ,1.25rem)) {
     .home-colors__text {
       font-size: calc(1rem + .25*(100vw - 20rem)/ 140)
+    }
+  }
+  @supports (font-size:clamp(3.125rem ,2.8571428571rem + 1.3392857143vw ,5rem)) {
+    .item-room__icon {
+      font-size: clamp(3.125rem ,2.8571428571rem + 1.3392857143vw ,5rem)
+    }
+  }
+  @supports not (font-size:clamp(3.125rem ,2.8571428571rem + 1.3392857143vw ,5rem)) {
+    .item-room__icon {
+      font-size: calc(3.125rem + 1.875*(100vw - 20rem)/ 140)
     }
   }
   @supports (font-size:clamp(1rem ,0.9821428571rem + 0.0892857143vw ,1.125rem)) {
