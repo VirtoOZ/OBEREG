@@ -71,7 +71,72 @@
 		}
 	}
 }
+// .proj-color
+.proj-color {
+	flex: 0 0 rem(40);
+	height: rem(40);
 
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: rotate(-45deg);
+	& span {
+		position: relative;
+		flex: 0 0 rem(36);
+		height: rem(36);
+		border: rem(1) solid $grayColor;
+		border-radius: 50%;
+		overflow: hidden;
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 50%;
+			left: 0;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+	}
+	// .proj-color_white-gray
+	&_white-gray {
+		& span {
+			&::before {
+				background-color: #fff;
+			}
+			&::after {
+				background-color: $grayColor;
+			}
+		}
+	}
+	// .proj-color_gray-white
+	&_gray-white {
+		& span {
+			&::before {
+				background-color: $grayColor;
+			}
+			&::after {
+				background-color: #fff;
+			}
+		}
+	}
+	// .proj-color_red-green
+	&_red-green {
+		& span {
+			&::before {
+				background-color: rgba(120, 31, 25, 1);
+			}
+			&::after {
+				background-color: rgba(60, 79, 49, 1);
+			}
+		}
+	}
+}
 .buttons-footer {
 }
 .animations {

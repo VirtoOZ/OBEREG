@@ -324,6 +324,56 @@ body {
 .content__item:not(:last-child) {
   margin-bottom: .625rem
 }
+.proj-color {
+  flex: 0 0 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+.proj-color span {
+  position: relative;
+  flex: 0 0 2.25rem;
+  height: 2.25rem;
+  border: .0625rem solid #383e42;
+  border-radius: 50%;
+  overflow: hidden
+}
+.proj-color span::after,
+.proj-color span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 0
+}
+.proj-color span::before {
+  top: 0
+}
+.proj-color span::after {
+  bottom: 0
+}
+.proj-color_white-gray span::before {
+  background-color: #fff
+}
+.proj-color_white-gray span::after {
+  background-color: #383e42
+}
+.proj-color_gray-white span::before {
+  background-color: #383e42
+}
+.proj-color_gray-white span::after {
+  background-color: #fff
+}
+.proj-color_red-green span::before {
+  background-color: #781f19
+}
+.proj-color_red-green span::after {
+  background-color: #3c4f31
+}
 @-webkit-keyframes pulse-white {
   0% {
     color: #dcdedf;
@@ -1172,10 +1222,6 @@ body {
   justify-content: flex-start;
   gap: 1.25rem
 }
-.home-s__columns {
-  display: grid;
-  grid-template-columns: repeat(2,1fr)
-}
 .home-s__column {
   flex: 0 1 50%
 }
@@ -1242,42 +1288,8 @@ body {
 .home-colors__navigation {
   align-items: center
 }
-.home-colors__title {
-  flex: 0 0 2.5rem;
-  height: 2.5rem;
-  border: .0625rem solid #383e42;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg)
-}
-.home-colors__title span {
-  position: relative;
-  flex: 0 0 2.25rem;
-  height: 2.25rem;
-  border: .0625rem solid #383e42;
-  border-radius: 50%
-}
-.home-colors__title span::after,
-.home-colors__title span::before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0
-}
-.home-colors__title span::before {
-  content: "";
-  background-color: #fff
-}
-.home-colors__title span::after {
-  content: "";
-  background-color: #383e42;
-  -webkit-transform: translate(50%,0);
-  transform: translate(50%,0)
+.home-colors__title._tab-active {
+  border: .0625rem solid #383e42
 }
 .descriptions__item {
   align-self: center
@@ -1289,16 +1301,17 @@ body {
   margin-bottom: .9375rem
 }
 .home-links {
-  display: flex;
-  flex-wrap: wrap
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start
 }
 .home-links__links {
-  flex: 0 1 50%
+  display: flex;
+  border-bottom: .0625rem solid #383e42;
+  transition: color .3s ease 0s,border-color .3s ease 0s
 }
-.home-links__links a {
-  border-bottom: .0625rem solid #383e42
-}
-.home-links__links a:not(:last-child) {
+.home-links__links:not(:last-child) {
   margin-bottom: .5rem
 }
 .page {
@@ -2041,6 +2054,14 @@ button.swiper-pagination-bullet {
   .footer__home-top {
     gap: 1.875rem
   }
+  .home-s__columns {
+    row-gap: 3.125rem
+  }
+  .home-s__columns {
+    -webkit-column-gap: 3.125rem;
+    -moz-column-gap: 3.125rem;
+    column-gap: 3.125rem
+  }
 }
 @media (min-width:61.99875em) {
   .menu__list {
@@ -2422,6 +2443,10 @@ button.swiper-pagination-bullet {
   .home-s__body {
     display: flex
   }
+  .home-s__columns {
+    display: grid;
+    grid-template-columns: 40% 1fr
+  }
   .home-s__bg-image {
     position: relative;
     padding-bottom: 56%;
@@ -2703,13 +2728,8 @@ button.swiper-pagination-bullet {
   .link-contacts :not(:last-child) {
     margin-bottom: 1rem
   }
-  .home-s__columns {
-    row-gap: 3.125rem
-  }
-  .home-s__columns {
-    -webkit-column-gap: 3.125rem;
-    -moz-column-gap: 3.125rem;
-    column-gap: 3.125rem
+  .home-s__column:not(:last-child) {
+    margin-bottom: 2.5rem
   }
   .home-info__colors:not(:last-child) {
     margin-bottom: 3.75rem
@@ -2968,13 +2988,8 @@ button.swiper-pagination-bullet {
   .link-contacts :not(:last-child) {
     margin-bottom: .625rem
   }
-  .home-s__columns {
-    row-gap: .625rem
-  }
-  .home-s__columns {
-    -webkit-column-gap: .3125rem;
-    -moz-column-gap: .3125rem;
-    column-gap: .3125rem
+  .home-s__column:not(:last-child) {
+    margin-bottom: 1.25rem
   }
   .home-info__colors:not(:last-child) {
     margin-bottom: 1.875rem
@@ -3847,28 +3862,14 @@ button.swiper-pagination-bullet {
       margin-bottom: calc(.625rem + .375*(100vw - 20rem)/ 140)
     }
   }
-  @supports (row-gap:clamp(0.625rem ,0.2678571429rem + 1.7857142857vw ,3.125rem)) {
-    .home-s__columns {
-      row-gap: clamp(.625rem ,.2678571429rem + 1.7857142857vw ,3.125rem)
+  @supports (margin-bottom:clamp(1.25rem ,1.0714285714rem + 0.8928571429vw ,2.5rem)) {
+    .home-s__column:not(:last-child) {
+      margin-bottom: clamp(1.25rem ,1.0714285714rem + .8928571429vw ,2.5rem)
     }
   }
-  @supports not (row-gap:clamp(0.625rem ,0.2678571429rem + 1.7857142857vw ,3.125rem)) {
-    .home-s__columns {
-      row-gap: calc(.625rem + 2.5*(100vw - 20rem)/ 140)
-    }
-  }
-  @supports ((-moz-column-gap:clamp(0.3125rem ,-0.0892857143rem + 2.0089285714vw ,3.125rem)) or (column-gap:clamp(0.3125rem ,-0.0892857143rem + 2.0089285714vw ,3.125rem))) {
-    .home-s__columns {
-      -webkit-column-gap: clamp(.3125rem ,-.0892857143rem + 2.0089285714vw ,3.125rem);
-      -moz-column-gap: clamp(.3125rem ,-.0892857143rem + 2.0089285714vw ,3.125rem);
-      column-gap: clamp(.3125rem ,-.0892857143rem + 2.0089285714vw ,3.125rem)
-    }
-  }
-  @supports not ((-moz-column-gap:clamp(0.3125rem ,-0.0892857143rem + 2.0089285714vw ,3.125rem)) or (column-gap:clamp(0.3125rem ,-0.0892857143rem + 2.0089285714vw ,3.125rem))) {
-    .home-s__columns {
-      -webkit-column-gap: calc(.3125rem + 2.8125*(100vw - 20rem)/ 140);
-      -moz-column-gap: calc(.3125rem + 2.8125*(100vw - 20rem)/ 140);
-      column-gap: calc(.3125rem + 2.8125*(100vw - 20rem)/ 140)
+  @supports not (margin-bottom:clamp(1.25rem ,1.0714285714rem + 0.8928571429vw ,2.5rem)) {
+    .home-s__column:not(:last-child) {
+      margin-bottom: calc(1.25rem + 1.25*(100vw - 20rem)/ 140)
     }
   }
   @supports (margin-bottom:clamp(1.875rem ,1.6071428571rem + 1.3392857143vw ,3.75rem)) {
@@ -4121,6 +4122,30 @@ button.swiper-pagination-bullet {
       gap: calc(.625rem + 1.25*(100vw - 20rem)/ 140)
     }
   }
+  @supports (row-gap:clamp(0.625rem ,0.2678571429rem + 1.7857142857vw ,3.125rem)) {
+    .home-s__columns {
+      row-gap: clamp(.625rem ,.2678571429rem + 1.7857142857vw ,3.125rem)
+    }
+  }
+  @supports not (row-gap:clamp(0.625rem ,0.2678571429rem + 1.7857142857vw ,3.125rem)) {
+    .home-s__columns {
+      row-gap: calc(.625rem + 2.5*(100vw - 20rem)/ 140)
+    }
+  }
+  @supports ((-moz-column-gap:clamp(0.3125rem ,-0.0892857143rem + 2.0089285714vw ,3.125rem)) or (column-gap:clamp(0.3125rem ,-0.0892857143rem + 2.0089285714vw ,3.125rem))) {
+    .home-s__columns {
+      -webkit-column-gap: clamp(.3125rem ,-.0892857143rem + 2.0089285714vw ,3.125rem);
+      -moz-column-gap: clamp(.3125rem ,-.0892857143rem + 2.0089285714vw ,3.125rem);
+      column-gap: clamp(.3125rem ,-.0892857143rem + 2.0089285714vw ,3.125rem)
+    }
+  }
+  @supports not ((-moz-column-gap:clamp(0.3125rem ,-0.0892857143rem + 2.0089285714vw ,3.125rem)) or (column-gap:clamp(0.3125rem ,-0.0892857143rem + 2.0089285714vw ,3.125rem))) {
+    .home-s__columns {
+      -webkit-column-gap: calc(.3125rem + 2.8125*(100vw - 20rem)/ 140);
+      -moz-column-gap: calc(.3125rem + 2.8125*(100vw - 20rem)/ 140);
+      column-gap: calc(.3125rem + 2.8125*(100vw - 20rem)/ 140)
+    }
+  }
 }
 @media (min-width:61.99875em)and (max-width:20em) {
   --button,
@@ -4144,6 +4169,14 @@ button.swiper-pagination-bullet {
   }
   .footer__home-top {
     gap: .625rem
+  }
+  .home-s__columns {
+    row-gap: .625rem
+  }
+  .home-s__columns {
+    -webkit-column-gap: .3125rem;
+    -moz-column-gap: .3125rem;
+    column-gap: .3125rem
   }
 }
 @media (max-width:61.99875em)and (min-width:160em) {
@@ -4317,5 +4350,9 @@ button.swiper-pagination-bullet {
   }
   .link-contacts a:hover {
     text-shadow: 0 0 .1875rem #792423
+  }
+  .home-links__links:hover {
+    color: #792423;
+    border-color: #792423
   }
 }
