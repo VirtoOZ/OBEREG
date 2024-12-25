@@ -3562,22 +3562,34 @@
         });
     }
     function initSliders() {
-        if (document.querySelector(".swiper")) new Swiper(".home-plan__slider", {
-            modules: [ Pagination ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            speed: 800,
-            pagination: {
-                el: ".home-plan__pagination",
-                clickable: true,
-                renderBullet: function(index, className) {
-                    return '<span class="' + className + '">' + (index + 1) + "</span>";
-                }
-            },
-            on: {}
-        });
+        if (document.querySelector(".swiper")) {
+            new Swiper(".home-plan__slider", {
+                modules: [ Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                pagination: {
+                    el: ".home-plan__pagination",
+                    clickable: true,
+                    renderBullet: function(index, className) {
+                        return '<span class="' + className + '">' + (index + 1) + "</span>";
+                    }
+                },
+                on: {}
+            });
+            new Swiper(".home-s-media__slider", {
+                modules: [ Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                pagination: {},
+                on: {}
+            });
+        }
     }
     window.addEventListener("load", (function(e) {
         initSliders();
