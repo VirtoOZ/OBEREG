@@ -6,18 +6,18 @@
 	<div class="wrapper">
 		@@include('html/_header.html',{})
 		<main class="page">
-			<section class="page__home-s home-s">
-				<div data-tabs class="home-s__body tabs">
-					<div class="home-s__content home-s-content content">
-						<div class="home-s__btn button_nav">
+			<section class="page__building building">
+				<div data-tabs class="building__body tabs">
+					<div class="building__content building-content content">
+						<div class="building__btn button_nav">
 							<a href="kits.html" class="button_nav__btn button_blur _icon-arrow-left">Коммуникации</a>
 							<!-- <a href="index.html" class="nav-button__btn nav-button__next button button-blur _icon-arrow-left">Главная</a> -->
 						</div>
 						<div class="content__title">
 							<h1>Проект дома S</h1>
 						</div>
-						<div class="home-s__columns">
-							<div class="home-s__column home-plan">
+						<div class="building__columns">
+							<div class="building__column home-plan">
 								<!-- Оболочка слайдера -->
 								<div class="home-plan__slider swiper">
 									<!-- Движущаяся часть слайдера -->
@@ -44,7 +44,7 @@
 								</div>
 								<div class="home-plan__descr">*Альтернативная планировка</div>
 							</div>
-							<div class="home-s__column home-info">
+							<div class="building__column home-info">
 								<div class="home-info__colors home-colors ">
 									<span class="home-colors__text">Цветовые решения:</span>
 									<nav data-tabs-titles class="home-colors__navigation tabs__navigation">
@@ -88,106 +88,93 @@
 									</div>
 								</div>
 							</div>
-							<div class="home-s__column home-links">
+							<div class="building__column home-links">
 								<a href="" class="home-links__links">Скачать спецификацию</a>
 								<a href="" class="home-links__links">Фасады и разрезы</a>
 							</div>
-							<div class="home-s__column home-price">
+							<div class="building__column home-price">
 								<div class="home-price__price">от 59 млн. ₽</div>
 							</div>
 						</div>
 					</div>
-					<div data-tabs-body class="home-s__media home-s-media content tabs__content">
-						<!-- Оболочка слайдера -->
-						<!-- <div class="home-s-media__slider swiper"> -->
-						<!-- Движущаяся часть слайдера -->
-						<!-- <div class="home-s-media__wrapper swiper-wrapper"> -->
-						<!-- Слайд -->
-						<!-- <div class="home-s-media__slide swiper-slide"></div> -->
-						<!-- </div> -->
-						<!-- Если нужна пагинация -->
-						<!-- <div class="swiper-pagination"></div> -->
-						<!-- Если нужен скролбар -->
-						<!-- <div class="swiper-scrollbar"></div> -->
-						<!-- </div> -->
-
-						<div class="home-s__bg-images tabs__body">
-							<!-- Оболочка слайдера -->
-							<div class="home-s-media__slider swiper">
-								<!-- Движущаяся часть слайдера -->
-								<div class="home-s-media__wrapper swiper-wrapper">
-									<!-- Слайд -->
-									<!-- <div class="home-s__bg-image swiper-slide">
-										<video loop muted playsinline controls preload="auto">
-											<source type="video/webm" src="files/">
-											<source type="video/mp4" src="files/proekt-doma-s-bez-logo_420-1.mov">
-										</video>
-									</div> -->
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/white-black/type-s-var-aa-cam3-day-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/white-black/type-s-var-ba-cam2-day-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/white-black/type-s-var-ba-cam4-day-1-1024x576-1-450x253-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/white-black/type-s-var-ba-cam3-day-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/white-black/type-s-var-aa-cam4-day-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/white-black/type-s-var-ba-cam4-day-1-1024x576-1-450x253-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/white-black/type-s-cam5-aa-day-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-10-1-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-5-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/spalnja-1-1024x1024-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/s_1-1024x1024-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-2-1-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-4-1-1024x576-1.jpg" alt="background"></div>
-
-								</div>
-								<!-- Если нужна пагинация -->
-								<!-- <div class="swiper-pagination"></div> -->
-								<!-- Если нужен скролбар -->
-								<!-- <div class="swiper-scrollbar"></div> -->
-							</div>
+					<div class="building__media building-media content">
+						<div class="building__video">
+							<video loop muted playsinline controls autoplay preload="auto">
+								<source type="video/webm" src="files/">
+								<source type="video/mp4" src="files/proekt-doma-s-bez-logo_420-1.mov">
+							</video>
 						</div>
+						<div data-tabs-body class="building-media__tabs tabs__content">
+							<div class="building-media__body tabs__body">
+								<!-- Оболочка слайдера -->
+								<div class="building-media__slider swiper">
+									<!-- Движущаяся часть слайдера -->
+									<div class="building-media__wrapper swiper-wrapper">
+										<!-- Слайд -->
+										<div class="building__image swiper-slide"><img src="img/projects/S/white-black/type-s-var-aa-cam3-day-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/white-black/type-s-var-ba-cam2-day-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/white-black/type-s-var-ba-cam4-day-1-1024x576-1-450x253-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/white-black/type-s-var-ba-cam3-day-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/white-black/type-s-var-aa-cam4-day-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/white-black/type-s-var-ba-cam4-day-1-1024x576-1-450x253-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/white-black/type-s-cam5-aa-day-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-10-1-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-5-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/spalnja-1-1024x1024-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/s_1-1024x1024-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-2-1-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-4-1-1024x576-1.jpg" alt="background"></div>
 
-						<div class="home-s__bg-images tabs__body">
-							<!-- Оболочка слайдера -->
-							<div class="home-s-media__slider swiper">
-								<!-- Движущаяся часть слайдера -->
-								<div class="home-s-media__wrapper swiper-wrapper">
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/red-green/type-c-var-b-cam3-day-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/red-green/type-c-var-b-cam2-day-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/red-green/type-c-var-b-cam1-day-2-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/red-green/type-c-var-a-cam4-day-1-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/red-green/type-c-var-a-cam3-day-3-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/red-green/type-c-var-a-cam2-day-1-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/red-green/type-c-var-a-cam5-day-1-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-10-1-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-5-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/spalnja-1-1024x1024-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/s_1-1024x1024-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-2-1-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-4-1-1024x576-1.jpg" alt="background"></div>
+									</div>
+									<!-- Если нужна пагинация -->
+									<!-- <div class="swiper-pagination"></div> -->
+									<!-- Если нужен скролбар -->
+									<!-- <div class="swiper-scrollbar"></div> -->
 								</div>
 							</div>
-						</div>
-						<div class="home-s__bg-images tabs__body">
-							<!-- Оболочка слайдера -->
-							<div class="home-s-media__slider swiper">
-								<!-- Движущаяся часть слайдера -->
-								<div class="home-s-media__wrapper swiper-wrapper">
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/black-white/type-s-var-bb-cam3-day-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/black-white/type-s-var-ab-cam3-day-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/black-white/type-s-var-ab-cam2-day-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/black-white/type-s-var-ab-cam4-day-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/black-white/type-s-var-bb-cam2-day-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/black-white/type-s-cam5-ab-day-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-10-1-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-5-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/spalnja-1-1024x1024-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/s_1-1024x1024-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-2-1-1024x576-1.jpg" alt="background"></div>
-									<div class="home-s__bg-image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-4-1-1024x576-1.jpg" alt="background"></div>
+							<div class="building-media__body tabs__body">
+								<!-- Оболочка слайдера -->
+								<div class="building-media__slider swiper">
+									<!-- Движущаяся часть слайдера -->
+									<div class="building-media__wrapper swiper-wrapper">
+										<div class="building__image swiper-slide"><img src="img/projects/S/red-green/type-c-var-b-cam3-day-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/red-green/type-c-var-b-cam2-day-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/red-green/type-c-var-b-cam1-day-2-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/red-green/type-c-var-a-cam4-day-1-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/red-green/type-c-var-a-cam3-day-3-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/red-green/type-c-var-a-cam2-day-1-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/red-green/type-c-var-a-cam5-day-1-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-10-1-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-5-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/spalnja-1-1024x1024-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/s_1-1024x1024-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-2-1-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-4-1-1024x576-1.jpg" alt="background"></div>
+									</div>
+								</div>
+							</div>
+							<div class="building-media__body tabs__body">
+								<!-- Оболочка слайдера -->
+								<div class="building-media__slider swiper">
+									<!-- Движущаяся часть слайдера -->
+									<div class="building-media__wrapper swiper-wrapper">
+										<div class="building__image swiper-slide"><img src="img/projects/S/black-white/type-s-var-bb-cam3-day-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/black-white/type-s-var-ab-cam3-day-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/black-white/type-s-var-ab-cam2-day-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/black-white/type-s-var-ab-cam4-day-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/black-white/type-s-var-bb-cam2-day-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/black-white/type-s-cam5-ab-day-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-10-1-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-5-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/spalnja-1-1024x1024-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/s_1-1024x1024-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-2-1-1024x576-1.jpg" alt="background"></div>
+										<div class="building__image swiper-slide"><img src="img/projects/S/gostinaja-kuhnja-4-1-1024x576-1.jpg" alt="background"></div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 			</section>
 		</main>
 		<div class="footer__container">

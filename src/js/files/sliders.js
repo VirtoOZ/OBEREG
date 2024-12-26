@@ -8,7 +8,7 @@
 //При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 //Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -108,11 +108,11 @@ function initSliders() {
 			}
 		});
 		//Создаем слайдер
-		new Swiper('.home-s-media__slider', { //Указываем класс нужного слайдера
+		new Swiper('.building-media__slider', { //Указываем класс нужного слайдера
 			//Подключаем модули слайдера
 			//для конкретного случая
 			// modules: [Navigation],
-			modules: [Pagination],
+			modules: [Pagination, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -122,18 +122,18 @@ function initSliders() {
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			// loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
+
 			// Эффекты
-			effect: 'fade',
+			// effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+
 
 			// Пагинация
 			pagination: {

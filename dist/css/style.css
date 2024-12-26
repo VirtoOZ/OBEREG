@@ -274,7 +274,6 @@ body {
   border: 1px solid #000
 }
 .tabs__content {
-  border: 1px solid #eee;
   padding: .625rem .9375rem
 }
 [class*=-ibg] {
@@ -1212,7 +1211,7 @@ body {
 .avantgarde-media {
   position: relative
 }
-.home-s {
+.building {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1220,17 +1219,17 @@ body {
   left: 0;
   overflow: auto
 }
-.home-s__body {
+.building__body {
   position: absolute;
   width: 100%;
   min-height: 100%;
   top: 0;
   left: 0
 }
-.home-s__content {
+.building__content {
   padding-right: 1.25rem
 }
-.home-s__content .content__title {
+.building__content .content__title {
   font-size: 2.8125rem;
   display: inline-flex;
   flex-wrap: wrap;
@@ -1238,19 +1237,47 @@ body {
   justify-content: flex-start;
   gap: 1.25rem
 }
-.home-s__column {
+.building__column {
   flex: 0 1 50%
 }
-.home-s__bg-images {
+.building__image {
+  position: relative;
+  padding-bottom: 48.6vh
+}
+.building__image img {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  overflow: auto
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center
 }
-.home-s-media {
-  position: relative
+.building__video {
+  width: 100%;
+  position: relative;
+  padding-bottom: 48.6vh
+}
+.building__video video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center
+}
+.building-media__tabs {
+  position: relative;
+  padding: 0
+}
+.building-media.content {
+  display: block;
+  padding: 0
 }
 .home-plan {
   display: flex;
@@ -2069,10 +2096,10 @@ button.swiper-pagination-bullet {
   .footer__home-top {
     gap: 1.875rem
   }
-  .home-s__columns {
+  .building__columns {
     row-gap: 3.125rem
   }
-  .home-s__columns {
+  .building__columns {
     -webkit-column-gap: 3.125rem;
     -moz-column-gap: 3.125rem;
     column-gap: 3.125rem
@@ -2455,23 +2482,42 @@ button.swiper-pagination-bullet {
     display: flex;
     align-items: flex-end
   }
-  .home-s__body {
+  .building__body {
     display: flex
   }
-  .home-s__columns {
+  .building__columns {
     display: grid;
     grid-template-columns: 40% 1fr
   }
-  .home-s-content {
+  .building__media {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: flex-end
+  }
+  .building__video {
+    border-radius: 0 0 0 4.6875rem;
+    overflow: hidden
+  }
+  .building-content {
     flex: 1 1 55%;
     display: flex;
     flex-direction: column;
     justify-content: center
   }
-  .home-s-media {
-    flex: 1 1 45%;
-    display: flex;
-    align-items: flex-end
+  .building-media__tabs {
+    padding-bottom: 48.6vh
+  }
+  .building-media__body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto
+  }
+  .building-media__slider {
+    border-radius: 4.6875rem 0 0 0;
+    overflow: hidden
   }
 }
 @media (min-width:61.99875em)and (min-width:120em) {
@@ -2517,7 +2563,7 @@ button.swiper-pagination-bullet {
     -moz-column-gap: 1.875rem;
     column-gap: 1.875rem
   }
-  .home-s__content {
+  .building__content {
     display: grid;
     justify-content: space-between;
     grid-template-columns: repeat(2,1fr);
@@ -2721,7 +2767,7 @@ button.swiper-pagination-bullet {
   .link-contacts :not(:last-child) {
     margin-bottom: 1rem
   }
-  .home-s__column:not(:last-child) {
+  .building__column:not(:last-child) {
     margin-bottom: 2.5rem
   }
   .home-info__colors:not(:last-child) {
@@ -2984,7 +3030,7 @@ button.swiper-pagination-bullet {
   .link-contacts :not(:last-child) {
     margin-bottom: .625rem
   }
-  .home-s__column:not(:last-child) {
+  .building__column:not(:last-child) {
     margin-bottom: 1.25rem
   }
   .home-info__colors:not(:last-child) {
@@ -3862,12 +3908,12 @@ button.swiper-pagination-bullet {
     }
   }
   @supports (margin-bottom:clamp(1.25rem ,1.0714285714rem + 0.8928571429vw ,2.5rem)) {
-    .home-s__column:not(:last-child) {
+    .building__column:not(:last-child) {
       margin-bottom: clamp(1.25rem ,1.0714285714rem + .8928571429vw ,2.5rem)
     }
   }
   @supports not (margin-bottom:clamp(1.25rem ,1.0714285714rem + 0.8928571429vw ,2.5rem)) {
-    .home-s__column:not(:last-child) {
+    .building__column:not(:last-child) {
       margin-bottom: calc(1.25rem + 1.25*(100vw - 20rem)/ 140)
     }
   }
@@ -4132,24 +4178,24 @@ button.swiper-pagination-bullet {
     }
   }
   @supports (row-gap:clamp(0.625rem ,0.2678571429rem + 1.7857142857vw ,3.125rem)) {
-    .home-s__columns {
+    .building__columns {
       row-gap: clamp(.625rem ,.2678571429rem + 1.7857142857vw ,3.125rem)
     }
   }
   @supports not (row-gap:clamp(0.625rem ,0.2678571429rem + 1.7857142857vw ,3.125rem)) {
-    .home-s__columns {
+    .building__columns {
       row-gap: calc(.625rem + 2.5*(100vw - 20rem)/ 140)
     }
   }
   @supports ((-moz-column-gap:clamp(0.3125rem ,-0.0892857143rem + 2.0089285714vw ,3.125rem)) or (column-gap:clamp(0.3125rem ,-0.0892857143rem + 2.0089285714vw ,3.125rem))) {
-    .home-s__columns {
+    .building__columns {
       -webkit-column-gap: clamp(.3125rem ,-.0892857143rem + 2.0089285714vw ,3.125rem);
       -moz-column-gap: clamp(.3125rem ,-.0892857143rem + 2.0089285714vw ,3.125rem);
       column-gap: clamp(.3125rem ,-.0892857143rem + 2.0089285714vw ,3.125rem)
     }
   }
   @supports not ((-moz-column-gap:clamp(0.3125rem ,-0.0892857143rem + 2.0089285714vw ,3.125rem)) or (column-gap:clamp(0.3125rem ,-0.0892857143rem + 2.0089285714vw ,3.125rem))) {
-    .home-s__columns {
+    .building__columns {
       -webkit-column-gap: calc(.3125rem + 2.8125*(100vw - 20rem)/ 140);
       -moz-column-gap: calc(.3125rem + 2.8125*(100vw - 20rem)/ 140);
       column-gap: calc(.3125rem + 2.8125*(100vw - 20rem)/ 140)
@@ -4179,10 +4225,10 @@ button.swiper-pagination-bullet {
   .footer__home-top {
     gap: .625rem
   }
-  .home-s__columns {
+  .building__columns {
     row-gap: .625rem
   }
-  .home-s__columns {
+  .building__columns {
     -webkit-column-gap: .3125rem;
     -moz-column-gap: .3125rem;
     column-gap: .3125rem
