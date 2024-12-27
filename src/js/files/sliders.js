@@ -30,7 +30,7 @@ function initSliders() {
 	//Проверяем, есть ли слайдер на странице
 	if (document.querySelector('.swiper')) { //Указываем класс нужного слайдера
 		//Создаем слайдер
-		new Swiper('.home-plan__slider', { //Указываем класс нужного слайдера
+		new Swiper('.building-plan__slider', { //Указываем класс нужного слайдера
 			//Подключаем модули слайдера
 			//для конкретного случая
 			// modules: [Navigation],
@@ -41,13 +41,11 @@ function initSliders() {
 			spaceBetween: 0,
 			//autoHeight: true,
 			speed: 800,
-
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
 			//preloadImages: false,
 			//lazy: true,
-
 			/*
 			// Эффекты
 			effect: 'fade',
@@ -56,17 +54,14 @@ function initSliders() {
 				disableOnInteraction: false,
 			},
 			*/
-
 			// Пагинация
 			pagination: {
-				el: '.home-plan__pagination',
+				el: '.building-plan__pagination',
 				clickable: true,
 				renderBullet: function (index, className) {
 					return '<span class="' + className + '">' + (index + 1) + "</span>";
 				},
 			},
-
-
 			// Скроллбар
 			/*
 			scrollbar: {
@@ -74,7 +69,6 @@ function initSliders() {
 				draggable: true,
 			},
 			*/
-
 			// Кнопки "влево/вправо"
 			// navigation: {
 			// 	prevEl: '.swiper-button-prev',
@@ -104,11 +98,10 @@ function initSliders() {
 			*/
 			// События
 			on: {
-
 			}
 		});
 		//Создаем слайдер
-		new Swiper('.building-media__slider', { //Указываем класс нужного слайдера
+		new Swiper('.building-media__swiper', { //Указываем класс нужного слайдера
 			//Подключаем модули слайдера
 			//для конкретного случая
 			// modules: [Navigation],
