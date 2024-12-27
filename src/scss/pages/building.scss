@@ -1,0 +1,323 @@
+.building {
+	@media (min-width: $tablet) {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		overflow: auto;
+	}
+	// .building__btn
+	&__btn {
+	}
+	// .building__body
+	&__body {
+		@media (min-width: $tablet) {
+			display: flex;
+		}
+	}
+	// .building__content
+	&__content {
+		padding-right: rem(20);
+		@media (min-width: em(1200)) {
+			display: grid;
+			justify-content: space-between;
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: rem(30);
+		}
+		@media (min-width: $tablet) {
+			// flex: 1 1 55%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			min-height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 55%;
+		}
+	}
+	&__content .content__title {
+		font-size: rem(45);
+		display: inline-flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-start;
+		gap: rem(20);
+	}
+	// .building__columns
+	&__columns {
+		@media (min-width: $tablet) {
+			display: grid;
+			grid-template-columns: 40% 1fr;
+			@include adaptiveValue("row-gap", 50, 10);
+			@include adaptiveValue("column-gap", 50, 5);
+		}
+	}
+	// .building__column
+	&__column {
+		flex: 0 1 50%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 20);
+		}
+	}
+	// .building__buttons-place
+	&__buttons-place {
+	}
+	// .building__media
+	&__media {
+		// position: relative;
+		@media (min-width: $tablet) {
+			flex: 1 1 45%;
+			display: flex;
+			align-items: flex-end;
+		}
+	}
+}
+.building-content {
+}
+.building-media {
+	@media (min-width: $tablet) {
+		position: fixed;
+		width: 45%;
+		height: 100%;
+		top: 0;
+		right: 0;
+	}
+	// .building-media__wrapper
+	&__wrapper {
+	}
+	// .building-media__tabs
+	&__tabs {
+		position: relative;
+		padding: 0;
+		@media (min-width: $tablet) {
+			padding-bottom: 48.6vh;
+		}
+	}
+	// .building-media__body
+	&__body {
+		@media (min-width: $tablet) {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			// overflow: auto;
+		}
+	}
+	// .building-media__swiper
+	&__swiper {
+		@media (min-width: $tablet) {
+			border-radius: rem(75) 0 0 0;
+			overflow: hidden;
+		}
+	}
+	// .building-media__swiper-wrapper
+	&__swiper-wrapper {
+	}
+	// .building-media__video
+	&__video {
+		position: relative;
+		padding-bottom: 50vh;
+		video {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			object-position: center;
+		}
+		@media (min-width: $tablet) {
+			border-radius: 0 0 0 rem(75);
+			overflow: hidden;
+			padding-bottom: 48.65vh;
+		}
+	}
+	// .building-media__image
+	&__image {
+		position: relative;
+		padding-bottom: 50vh;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			object-position: center;
+		}
+		@media (min-width: $tablet) {
+			padding-bottom: 48.65vh;
+		}
+	}
+	&.content {
+		display: block;
+		padding: 0;
+	}
+}
+.building-plan {
+	display: flex;
+	flex-direction: column;
+	// .building-plan__slider
+	&__slider {
+		width: rem(185);
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	// .building-plan__wrapper
+	&__wrapper {
+	}
+	// .building-plan__slide
+	&__slide {
+		img {
+			max-width: 100%;
+		}
+	}
+	// .building-plan__link
+	&__link {
+	}
+	// .building-plan__dotts
+	&__dotts {
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+		margin-bottom: rem(12);
+	}
+	// .building-plan__pagination
+	&__pagination {
+		.swiper-pagination-bullet {
+			width: rem(40);
+			height: rem(40);
+			background-color: transparent;
+			border: rem(1) solid #000;
+			opacity: 1;
+			color: $grayColor;
+			text-align: center;
+			line-height: rem(40);
+			transition:
+				background-color 0.3s ease 0s,
+				color 0.3s ease 0s,
+				opacity 0.3s ease 0s;
+		}
+		.swiper-pagination-bullet-active {
+			background-color: $grayColor;
+			color: $mainTextColor;
+		}
+	}
+	// .building-plan__floor
+	&__floor {
+	}
+	// .building-plan__descr
+	&__descr {
+		font-size: rem(16);
+	}
+	// .building-plan__links
+	&__links {
+		display: flex;
+		flex-direction: column;
+	}
+}
+.building-info {
+	// .building-info__colors
+	&__colors {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 60, 30);
+		}
+	}
+	// .building-info__descriptions
+	&__descriptions {
+		display: grid;
+		@media (min-width: em(1920)) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		grid-template-columns: repeat(auto-fit, minmax(rem(120), 1fr));
+		grid-template-rows: repeat(3, 1fr);
+		row-gap: rem(22);
+		@include adaptiveValue("column-gap", 22, 5);
+		@media (max-width: $mobileSmall) {
+			// justify-items: center;
+		}
+	}
+	// .building-info__price
+	&__price {
+	}
+	// .building-info__item
+	&__item {
+		// justify-self: center;
+		align-self: center;
+	}
+	// .building-info__icon
+	&__icon {
+		@include adaptiveValue("font-size", 80, 50);
+		// line-height: math.div(50, 25);
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+	// .building-info__name
+	&__name {
+		@include adaptiveValue("font-size", 18, 16);
+		hyphens: auto;
+	}
+	// .building-info__value
+	&__value {
+		@include adaptiveValue("font-size", 26, 18);
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+}
+.building-colors {
+	// .building-colors__navigation
+	&__navigation {
+		@include adaptiveValue("column-gap", 15, 5);
+		align-items: center;
+	}
+	// .building-colors__text
+	&__text {
+		@include adaptiveValue("font-size", 20, 16);
+	}
+	// .building-colors__title
+	&__title {
+		// border: rem(1) solid $grayColor;
+		&._tab-active {
+			&::after {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+.building-price {
+	// .building-price__price
+	&__price {
+		@include adaptiveValue("font-size", 38, 26);
+	}
+}
+.building-links {
+	@include adaptiveValue("font-size", 26, 18);
+	display: inline-flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: flex-start;
+	// .building-links__links
+	&__links {
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+		display: flex;
+		border-bottom: rem(1) solid $grayColor;
+		transition:
+			color 0.3s ease 0s,
+			border-color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+				border-color: $mainColor;
+			}
+		}
+	}
+}

@@ -93,6 +93,7 @@
 			opacity 0.3s ease 0s;
 	}
 	& span {
+		border: rem(1) solid $grayColor;
 		position: relative;
 		flex: 0 0 rem(34);
 		height: rem(34);
@@ -114,7 +115,7 @@
 		}
 	}
 	// .proj-color_white-gray
-	&_white-gray {
+	&_white-black {
 		& span {
 			&::before {
 				background-color: #fff;
@@ -125,7 +126,7 @@
 		}
 	}
 	// .proj-color_gray-white
-	&_gray-white {
+	&_black-white {
 		& span {
 			&::before {
 				background-color: $grayColor;
@@ -143,6 +144,28 @@
 			}
 			&::after {
 				background-color: rgba(60, 79, 49, 1);
+			}
+		}
+	}
+	// .proj-color_white
+	&_white {
+		& span {
+			&::before {
+				background-color: rgba(255, 255, 255, 1);
+			}
+			&::after {
+				background-color: rgba(255, 255, 255, 1);
+			}
+		}
+	}
+	// .proj-color_black
+	&_black {
+		& span {
+			&::before {
+				background-color: $grayColor;
+			}
+			&::after {
+				background-color: $grayColor;
 			}
 		}
 	}
