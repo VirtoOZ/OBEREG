@@ -2586,14 +2586,6 @@ button.swiper-pagination-bullet {
     -moz-column-gap: 1.875rem;
     column-gap: 1.875rem
   }
-  .building__content {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(2,1fr);
-    -webkit-column-gap: 1.875rem;
-    -moz-column-gap: 1.875rem;
-    column-gap: 1.875rem
-  }
 }
 @media (min-width:120em) {
   .building-info__descriptions {
