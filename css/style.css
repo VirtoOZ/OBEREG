@@ -351,6 +351,7 @@ body {
   transition: visibility .3s ease 0s,opacity .3s ease 0s
 }
 .proj-color span {
+  border: .0625rem solid #383e42;
   position: relative;
   flex: 0 0 2.125rem;
   height: 2.125rem;
@@ -371,16 +372,16 @@ body {
 .proj-color span::after {
   bottom: 0
 }
-.proj-color_white-gray span::before {
+.proj-color_white-black span::before {
   background-color: #fff
 }
-.proj-color_white-gray span::after {
+.proj-color_white-black span::after {
   background-color: #383e42
 }
-.proj-color_gray-white span::before {
+.proj-color_black-white span::before {
   background-color: #383e42
 }
-.proj-color_gray-white span::after {
+.proj-color_black-white span::after {
   background-color: #fff
 }
 .proj-color_red-green span::before {
@@ -388,6 +389,18 @@ body {
 }
 .proj-color_red-green span::after {
   background-color: #3c4f31
+}
+.proj-color_white span::before {
+  background-color: #fff
+}
+.proj-color_white span::after {
+  background-color: #fff
+}
+.proj-color_black span::before {
+  background-color: #383e42
+}
+.proj-color_black span::after {
+  background-color: #383e42
 }
 @-webkit-keyframes pulse-white {
   0% {
