@@ -1,11 +1,10 @@
-
 /*
 Документация по работе в шаблоне: https://www.lightgalleryjs.com/docs/
 Документация плагина: https://www.lightgalleryjs.com/docs/
 Сниппет(HTML):
 */
 
-// Подключение функционала "Чертоги Фрилансера"
+// Подключение функционала
 import { isMobile, FLS } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";

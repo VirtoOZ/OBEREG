@@ -1,6 +1,4 @@
-// Подключение функционала "Чертоги Фрилансера"
+// Подключение функционала
 import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
-
-
